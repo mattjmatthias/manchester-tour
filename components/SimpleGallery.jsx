@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect } from 'react'
-import Image from 'next/image'
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
 import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin'
 import 'photoswipe/style.css'
@@ -13,7 +12,7 @@ export default function SimpleGallery(props) {
       gallery: '#' + props.galleryID,
       children: 'div',      
       pswpModule: () => import('photoswipe'),
-      paddingFn: (viewportSize) => {
+      paddingFn: () => {
         return {
           top: 30,
           bottom: 30,
@@ -23,10 +22,10 @@ export default function SimpleGallery(props) {
       },
     })
 
-    const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+    /*const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
       // Plugins options, for example:
       type: 'auto',
-    })
+    })*/
 
     lightbox.init()
 
