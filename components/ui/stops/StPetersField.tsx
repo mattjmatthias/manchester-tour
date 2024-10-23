@@ -10,7 +10,7 @@ const StPetersField: React.FC = () => {
     <>
       <div className="text-left text-xl mt-4">
         <Button label="View on map" href="/" />
-        <p className="mt-4">Say to the AI "I'm arriving at the Peterloo Memorial" (ideally 4 mins before you do)</p>
+        <p className="mt-4">Say to the AI &ldquo;I’m arriving at the Peterloo Memorial&rdquo; (ideally 4 mins before you do)</p>
       </div>
       <Music
         title="Spiegel im Spiegel (Excerpt)"

@@ -10,7 +10,7 @@ const Castlefield: React.FC = () => {
     <>
       <div className="text-left text-xl mt-4">
         <Button label="View on map" href="/" />
-        <p className="mt-4">Say to the AI "I'm arriving at Castlefield"</p>
+        <p className="mt-4">Say to the AI &ldquo;I’m arriving at Castlefield&rdquo;</p>
       </div>
       <Music
         title="Dirty Old Town"
