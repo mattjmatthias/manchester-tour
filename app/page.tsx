@@ -4,6 +4,12 @@ import Image from 'next/image';
 import TourStop from '@/components/ui/TourStop';
 import Castlefield from '@/components/ui/stops/Castlefield';
 import Link from 'next/link';
+import FriedrichEngels from '@/components/ui/stops/FriedrichEngels';
+import StPetersField from '@/components/ui/stops/StPetersField';
+import EmmelinePankhurst from '@/components/ui/stops/EmmelinePankhurst';
+import NorthernQuarter from '@/components/ui/stops/NorthernQuarter';
+import Ancoats from '@/components/ui/stops/Ancoats';
+import Button from '@/components/ui/Button';
 
 export default function Home() {
   return (
@@ -31,30 +37,21 @@ export default function Home() {
 
           {/* Right section with buttons */}
           <div className="flex md:flex-col md:text-xl text-lg flex-row md:gap-y-2 md:gap-x-0 gap-x-4 mt-8 md:mt-0 md:mb-0 mb-4 md:ml-8">
-            <Link className="bg-black h-fit min-w-[100px] text-center text-white py-2 md:px-8 flex-1 hover:bg-gray-800"
-              href="./before-you-start"
-              >
-              Before you start
-            </Link>
-            <Link className="bg-black h-fit min-w-[100px] text-center text-white py-2 md:px-8 flex-1 hover:bg-gray-800"
-              href="./before-you-start"
-              >
-              View tour route
-            </Link>
+            <Button href="./before-you-start" label="Before you start"/>
+            <Button href="./before-you-start" label="View tour route"/>
           </div>
         </div>
 
-        <TourStop title="Castlefield" sub="The Industrial Revolution">
-          <Castlefield/>
-        </TourStop>
-        <TourStop title="Friedrich Engels" sub="A Statue To Social Progress"/>
-        <TourStop title="St. Peter's Field" sub="The Peterloo Massacre"/>
-        <TourStop title="Emmeline Pankhurst" sub="The Suffragettes"/>
-        <TourStop title="Northern Quarter" sub="The Old Mills of Cottonopolis"/>
-        <TourStop title="Ancoats" sub="The World's 1st Industrial Suburb"/>
+        <TourStop title="Castlefield" sub="The Industrial Revolution"><Castlefield/></TourStop>
+        <TourStop title="Friedrich Engels" sub="A Statue To Social Progress"><FriedrichEngels/></TourStop>
+        <TourStop title="St. Peter's Field" sub="The Peterloo Massacre"><StPetersField/></TourStop>
+        <TourStop title="Emmeline Pankhurst" sub="The Suffragettes"><EmmelinePankhurst/></TourStop>
+        <TourStop title="Northern Quarter" sub="The Old Mills of Cottonopolis"><NorthernQuarter/></TourStop>
+        <TourStop title="Ancoats" sub="The World's 1st Industrial Suburb"><Ancoats/></TourStop>
       </div>
       <footer className="md:p-16 p-8">
-        <Link href="/privacy">Privacy</Link>
+        <Link href="/privacy" className="mr-8">Privacy Policy</Link>        
+        <Link href="/before-you-start" className="mr-8">Support</Link>
       </footer>
     </div>
   );

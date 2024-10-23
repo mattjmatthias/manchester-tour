@@ -3,6 +3,7 @@
 import Divider from "@/components/ui/Divider";
 import Link from "next/link";
 import Image from "next/image";
+import Button from "@/components/ui/Button";
 
 export default function BeforeYouStart() {
   return (
@@ -12,12 +13,7 @@ export default function BeforeYouStart() {
         <div className="md:flex w-full md:justify-between">
           {/* Left section with text */}
           <div className="text-left">
-            <Link
-              href="/"
-              className="bg-black h-fit w-fit text-white py-2 px-4 flex-1 hover:bg-gray-800 mb-8"
-            >
-              &lt; Back
-            </Link>
+            <Button href="/" label="&lt; Back"/>
             <h1 className="text-4xl mt-8">Before you start</h1>
             <h2 className="md:text-md text-md uppercase">
               Instructions for what you need
@@ -123,12 +119,7 @@ export default function BeforeYouStart() {
               Ready to get started?  
             </p>
           </div>
-          <Link
-              href="https://chatgpt.com/g/g-GGeTTmmjw-manchester-ai-tour-guide"
-              className="bg-black h-fit w-fit text-white py-2 px-4 flex-1 hover:bg-gray-800"
-            >
-              Open the AI in ChatGPT
-          </Link>
+          <Button href="https://chatgpt.com/g/g-GGeTTmmjw-manchester-ai-tour-guide" label="Open the AI in ChatGPT"/>
         </div>       
       </div>
       <footer className="md:p-16 p-8 text-sm">
