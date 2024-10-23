@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        cardo: ['Cardo', 'serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
