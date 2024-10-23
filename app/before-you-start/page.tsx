@@ -12,7 +12,7 @@ export default function BeforeYouStart() {
         <div className="md:flex w-full md:justify-between">
           {/* Left section with text */}
           <div className="text-left">
-            <Button href="/" label="&lt; Back"/>
+            <Button className="text-xl" href="/" label="&lt; Back" />
             <h1 className="text-4xl mt-8">Before you start</h1>
             <h2 className="md:text-md text-md uppercase">
               Instructions for what you need
@@ -39,8 +39,8 @@ export default function BeforeYouStart() {
                 rel="noopener noreferrer"
               >
                 ChatGPT account
-              </a>
-              {" "}(it’s free). For privacy-minded individuals, you can{" "}
+              </a>{" "}
+              (it’s free). For privacy-minded individuals, you can{" "}
               <a
                 href="https://openai.com/index/start-using-chatgpt-instantly/"
                 className="text-blue-500 underline hover:text-blue-700"
@@ -49,36 +49,53 @@ export default function BeforeYouStart() {
               >
                 opt out of training
               </a>{" "}
-              if you prefer your conversations not to be used for improving ChatGPT models. 
+              if you prefer your conversations not to be used for improving
+              ChatGPT models.
             </p>
             <p className="text-base mt-2">
-              So you can speak to the AI using voice, we recommend installing the app on your phone.
+              So you can speak to the AI using voice, we recommend installing
+              the app on your phone.
             </p>
             <div className="flex space-x-4 items-center">
               <a href="https://apps.apple.com/us/app/chatgpt/id6448311069">
-                <Image src="/appstore.svg" height={70} width={120} layout="intrinsic" alt="Download with App Store"/>
+                <Image
+                  src="/appstore.svg"
+                  height={70}
+                  width={120}
+                  layout="intrinsic"
+                  alt="Download with App Store"
+                />
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.openai.chatgpt">
-                <Image src="/google-play.png" height={95} width={156} layout="intrinsic" alt="Download with App Store"/>
+                <Image
+                  src="/google-play.png"
+                  height={95}
+                  width={156}
+                  layout="intrinsic"
+                  alt="Download with App Store"
+                />
               </a>
             </div>
-            <p className="text-base">You can read more about how to talk to the AI using voice in the app on {" "}
+            <p className="text-base">
+              You can read more about how to talk to the AI using voice in the
+              app on{" "}
               <a
                 href="https://help.openai.com/en/articles/8400625-voice-mode-faq%3F.flac"
                 className="text-blue-500 underline hover:text-blue-700"
                 target="_blank"
                 rel="noopener noreferrer"
-               >
+              >
                 OpenAI’s support page
               </a>
-              .</p>
+              .
+            </p>
           </section>
 
           {/* Music Setup Section */}
           <section className="mb-8">
             <h2 className="text-2xl mb-2">2. Music Setup</h2>
             <p className="text-base">
-              To enhance your tour with music, we provide links to either {" "}
+              To enhance your tour with music, we provide links to either{" "}
               <a
                 href="https://www.spotify.com"
                 className="text-blue-500 underline hover:text-blue-700"
@@ -96,8 +113,8 @@ export default function BeforeYouStart() {
               >
                 Apple Music
               </a>{" "}
-              account. If you don’t use either service we also provide music links using 
-              through{" "}
+              account. If you don’t use either service we also provide music
+              links using through{" "}
               <a
                 href="https://www.youtube.com"
                 className="text-blue-500 underline hover:text-blue-700"
@@ -106,24 +123,30 @@ export default function BeforeYouStart() {
               >
                 YouTube
               </a>
-              , though you might encounter some ads if you’re using a free account.
+              , though you might encounter some ads if you’re using a free
+              account.
             </p>
           </section>
 
-          <Divider/>
+          <Divider />
 
           {/* Call to Action */}
           <div className="text-left">
-            <p className="text-xl mb-4">
-              Ready to get started?  
-            </p>
+            <p className="text-xl mb-4">Ready to get started?</p>
           </div>
-          <Button href="https://chatgpt.com/g/g-GGeTTmmjw-manchester-ai-tour-guide" label="Open the AI in ChatGPT"/>
-        </div>       
+          <Button
+            className="text-xl"
+            href="https://chatgpt.com/g/g-GGeTTmmjw-manchester-ai-tour-guide"
+            label="Open the AI in ChatGPT"
+          />
+        </div>
       </div>
       <footer className="md:p-16 p-8 text-sm">
-          <p>Google Play and the Google Play logo are trademarks of Google LLC. &ldquo;Download on the App Store&rdquo; is a trademark of Apple Inc.</p>        
-        </footer>
+        <p>
+          Google Play and the Google Play logo are trademarks of Google LLC.
+          &ldquo;Download on the App Store&rdquo; is a trademark of Apple Inc.
+        </p>
+      </footer>
     </div>
   );
 }

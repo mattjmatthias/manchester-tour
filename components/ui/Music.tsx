@@ -18,10 +18,10 @@ const Music: React.FC<MusicProps> = ({
 }) => {
   return (
     <>
-      <h2 className="text-xl my-4">Music</h2>
+      <h2 className="text-xl mt-8 mb-4">Music</h2>
       <Link
         href={href}
-        className="flex items-center"
+        className="flex items-center p-2 hover:bg-gray-200 w-fit"
       >
         <div className="flex items-center">
           <Image

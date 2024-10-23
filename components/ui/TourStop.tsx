@@ -21,8 +21,8 @@ const TourStop: React.FC<StopProps> = ({ title, sub, children }) => {
         <h2 className="text-lg uppercase">{sub}</h2>
       </div>
       <div
-        className={`overflow-hidden transition-all duration-200 ease-in-out ${
-          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-fit opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         {children}

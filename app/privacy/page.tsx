@@ -49,7 +49,7 @@ export default function PrivacyPolicy() {
           <section className="my-8">
             <h2 className="text-2xl mb-2">3. Free and Ad-Free Service</h2>
             <p className="text-base">
-              The service is completely free to use and does not contain any advertisements. This isn’t magic, we’ve just been careful to design the service to be able to use free hosting services and we don’t believe everything should be about making money.
+              The service is completely free to use and does not contain any ads. This isn’t magic, we’ve just been careful to design the service to be able to use free hosting services as we don’t believe everything should be about making money.
             </p>
           </section>
 
