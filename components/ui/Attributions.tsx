@@ -15,7 +15,7 @@ const Attributions: React.FC<AttributionsProps> = ({attributions}) => {
       {attributions.map((attribution: AttributionProps, i: number) => {
         return <div
         key={i}
-        className="flex items-center hover:bg-gray-200 w-fit"      >
+        className="flex items-center w-fit"      >
         <div className="flex items-center">
           <div className="flex flex-col justify-between">
             <h3 className="text-sm">{attribution.source}</h3>

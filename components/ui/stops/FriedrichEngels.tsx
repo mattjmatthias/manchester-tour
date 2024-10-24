@@ -6,6 +6,7 @@ import Media, { MediaItemProps } from "../Media";
 import Links, { LinkProps } from "../Links";
 import Questions, { QuestionProps } from "../Questions";
 import Attributions, { AttributionProps } from "../Attributions";
+import Venues, { VenueProps } from "../Venues";
 
 const FriedrichEngels: React.FC = () => {
   const musicHref = MusicProvider({ songKey: "Friedrich Engels", index: 0 });
@@ -18,30 +19,59 @@ const FriedrichEngels: React.FC = () => {
       thumbnailWidth: 150,
       thumbnailHeight: 200,
     },
+    {
+      href: "/young-engels.jpg",
+      caption: "Photo of Friedrich Engels in his youth",
+      width: 800,
+      height: 531,
+      thumbnailWidth: 300,
+      thumbnailHeight: 187,
+    },
   ];
   const links: LinkProps[] = [
     {
       url: "https://library.chethams.com",
       caption: "Chetham Library",
+    },
+    {
+      url: "https://confidentials.com/manchester/friedrich-engels-HOME-first-street-manchester-was-his-return-right-or-wrong",
+      caption: "Confidentials: The return of Friedrich Engels - right or wrong?"
+    },
+    {
+      url: "https://youtu.be/ZAhceJjX8iQ?si=O1e4NMqzBsQ4KiII",
+      caption: "YouTube: Karl Marx and Friedrich Engels"
+    },
+    {
+      url: "http://news.bbc.co.uk/local/manchester/hi/people_and_places/history/newsid_8233000/8233388.stm",
+      caption: "BBC: Angel Meadow: 'Hell upon Earth'"
     }
   ];
   const questions: QuestionProps[] = [
     {
-      text: "How long did it take for the railway to replace the canals?",
+      text: "How did Engels’ experiences in Manchester shape his views on industrial capitalism?",
     },
     {
-      text: "What was Manchester's main industry before the industrial revolution?",
+      text: "What role did Engels play in documenting the lives of Manchester’s working class?",
     },
     {
-      text: "How did industrialisation influence the rise of labour movements and social reform?",
+      text: "How did Engels balance his role as a mill owner with his socialist beliefs?",
     },
     {
-      text: "What role did Manchester play in global cotton production during the 19th century?",
+      text: "In what ways did Engels’ observations of Manchester’s slums influence his later work with Marx?",
     },
     {
-      text: "How did the arrival of the railway change the layout of Manchester?",
+      text: "How did Engels’ time in Manchester affect his personal development and political ideology?",
     },
   ];
+  
+  const venues: VenueProps[] = [
+    { title: "Briton's Protection", imgSrc: "/venues/britons-protection.png", href: "https://www.facebook.com/thebritonsprotection/" },
+    { title: "Home", imgSrc: "/venues/home.png", href: "http://homemcr.org/" },
+    { title: "Indian Tiffin Room", imgSrc: "/venues/indian-tiffin.png", href: "http://indiantiffinroom.com/" },
+    { title: "Gas Works Brew Bar and Kitchen", imgSrc: "/venues/gasworks.png", href: "https://gasworksbrewbar.co.uk/" },
+    { title: "Atlas Bar", imgSrc: "/venus/atlas.png", href: "http://www.atlasbarmanchester.com/ "}
+  ]
+  
   
   const attributions: AttributionProps[] = [
     {
@@ -58,9 +88,9 @@ const FriedrichEngels: React.FC = () => {
   return (
     <>
       <div className="text-left text-xl mt-4">
-        <Button label="View on map" href="/" />
+        <Button label="View on map" href="https://maps.app.goo.gl/deNTGd9yYp1pPPy87?g_st=com.google.maps.preview.copy" />
         <p className="mt-4">
-          Say to the AI &ldquo;I’m arriving at the Friedrich Engels statue&rdquo;
+          Go to the <a href="https://maps.app.goo.gl/deNTGd9yYp1pPPy87?g_st=com.google.maps.preview.copy">Friedrich Statue</a>, play the song below and when you’re near say to the AI &ldquo;I’m arriving at the Friedrich Engels statue&rdquo;
         </p>
       </div>
       <Music
@@ -72,7 +102,8 @@ const FriedrichEngels: React.FC = () => {
       />
       <Media images={images} />
       <Links links={links} />
-      <Questions questions={questions} location="Castlefield" />    
+      <Questions questions={questions} location="Friedrich Engels" /> 
+      <Venues venues={venues}/>
       <Attributions attributions={attributions} />
       <Divider />
     </>
