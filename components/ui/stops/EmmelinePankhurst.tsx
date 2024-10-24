@@ -13,98 +13,89 @@ const EmmelinePankhurst: React.FC = () => {
 
   const images: MediaItemProps[] = [
     {
-      href: "/peterloo-massacre.png",
-      caption: "Statue of Friedrich Engels, Tony Wilson Square, 2019",
-      width: 1280,
-      height: 853,
-      thumbnailWidth: 300,
-      thumbnailHeight: 187,
+      href: "/emmeline-1913.jpg",
+      caption: "Emmeline Pankhurst, 1913",
+      width: 1920,
+      height: 2533,
+      thumbnailWidth: 187,
+      thumbnailHeight: 300,
     },
     {
-      href: "/peters-field.png",
-      caption: "Map of St Peter's Field, 1801",
-      width: 788,
-      height: 542,
-      thumbnailWidth: 290,
-      thumbnailHeight: 187,
+      href: "/emily-davison.jpg",
+      caption: "Part of Emily Davison's funeral procession, 1913",
+      width: 2560,
+      height: 1859,
+      thumbnailWidth: 339,
+      thumbnailHeight: 155,
     },
     {
-      href: "/monument.jpg",
-      caption: "Map of St Peter's Field, 1801",
-      width: 788,
-      height: 542,
-      thumbnailWidth: 265,
-      thumbnailHeight: 187,
-    },
-    {
-      href: "/peterloo-smithfield.jpg",
-      caption: "A print published on 27 August 1819 depicting Hunt's arrest by the constables",
-      width: 2000,
-      height: 1596,
-      thumbnailWidth: 251,
-      thumbnailHeight: 187,
+      href: "/emmeline-in-prison.jpg",
+      caption: "Emmeline Pankhurst in Prison, 1911",
+      width: 700,
+      height: 1158,
+      thumbnailWidth: 149,
+      thumbnailHeight: 300,
     }
   ];
   const links: LinkProps[] = [
     {
-      url: "https://www.imdb.com/title/tt4614612/",
-      caption: "Peterloo (2018), a film by Mike Leigh",
+      url: "https://www.pankhurstmuseum.com/",
+      caption: "Pankhurst Centre, Manchester",
     },
     {
-      url: "https://www.bbc.co.uk/newsround/49098500",
-      caption: "BBC Newsround: Peterloo Massacre: How the industrial revolution changed history"
+      url: "https://beta.nationalarchives.gov.uk/explore-the-collection/stories/emmeline-pankhurst/",
+      caption: "National Archives: Emmeline Pankhurst"
+    },
+    {
+        url: "https://youtu.be/7EMNDj_Ao3s?si=C1HQ2oAZxpQwNJEH",
+        caption: "YouTube: Emmeline Pankhurst | 'I incite this meeting to rebellion' speech, October 1912 | Women's Suffrage"
+    },
+    {
+        url: "https://www.historyextra.com/period/edwardian/emily-wilding-davison-epsom-derby-suffragette/",
+        caption: "History Extra: Emily Davison: the suffragette who stepped in front of the king's horse"
     }
   ];
+
   const questions: QuestionProps[] = [
     {
-      text: "How did the Peterloo Massacre influence public opinion about political reform in Britain?",
+      text: "How did Emmeline Pankhurst’s upbringing in Manchester influence her activism for women's suffrage?",
     },
     {
-      text: "How did the government justify the use of force against peaceful protesters at Peterloo?",
+      text: "What role did Emily Davison’s actions play in drawing attention to the suffragette movement?",
     },
     {
-      text: "When did the reformists achieve the reform they wanted?",
+      text: "How did the militant tactics of the suffragettes, led by Pankhurst, impact public perception of the women's movement?",
     },
     {
-      text: "How did media coverage and eyewitness accounts affect the aftermath of the Peterloo Massacre?",
+      text: "How did Emily Davison’s death at the Derby shape the suffrage movement’s strategy and legacy?",
     },
     {
-      text: "What were the long-term consequences of the Peterloo Massacre for Manchester and its political landscape?",
+      text: "In what ways did the work of Pankhurst and Davison influence future civil rights movements in the UK and beyond?",
     },
   ];
   
   const venues: VenueProps[] = [
-    { title: "Society", imgSrc: "/venues/society.png", href: "http://www.societymanchester.com/" },
-    { title: "The Temple (Temple of Convenience)", imgSrc: "/venues/temple.png", href: "https://www.facebook.com/pages/The-Temple-of-Convenience/156811607675271?fref=ts" },
-    { title: "Ezra & Gil - Peter Street", imgSrc: "/venues/ezra.png", href: "http://www.ezraandgil.co.uk/" },
-    { title: "Albert's Schloss", imgSrc: "/venues/alberts-schloss.png", href: "https://albertsschloss.com/" },   
-    { title: "Peaky Blinders Manchester", imgSrc: "/venues/peaky.png", href: "https://www.peakyblindersmanchester.com/" }
+    { title: "Founders Hall", imgSrc: "/venues/founders.png", href: "https://www.foundershall.co.uk/" },
+    { title: "The Anthologist St Peter's Square", imgSrc: "/venues/anthologist.png", href: "https://www.drakeandmorgan.co.uk/the-anthologist-manchester" },
+    { title: "The Vine Inn", imgSrc: "/venues/vine-inn.png", href: "https://www.thevineinnmanchester.co.uk/" }    
   ]
   
   
   const attributions: AttributionProps[] = [
     {
-      source: "Image of the Peterloo Massacre",
+      source: "Restored image of Emmeline Pankhurst, 1913",
       attribution: (
         <>
-          <a href="https://commons.wikimedia.org/w/index.php?curid=3780583">Public Domain license</a> granted by <a href="https://en.wikipedia.org/wiki/en:Richard_Carlile" className="extiw" title="w:en:Richard Carlile"><span title="British social reformer">Richard Carlile</span></a> - <a href="https://en.wikipedia.org/wiki/en:Manchester_Library_%26_Information_Service" className="extiw" title="w:en:Manchester Library &amp; Information Service"><span title="public library service in Manchester, UK">Manchester Libraries</span></a>
+          <a href="https://commons.wikimedia.org/w/index.php?curid=3780583">Public Domain license</a> granted by <a href="https://en.wikipedia.org/wiki/User:Adam_Cuerden" className="extiw" title="w:en:Adam Cuerden"><span>Adam Cuerden</span></a>
         </>
       ),
     },
     {
-      source: "Print published 27 August 1819",
-      attribution: (
-        <>
-          <a href="https://commons.wikimedia.org/w/index.php?curid=3780583">Public Domain license</a>, Published by J.Evans and Sons, 42 Long Lane West, Smithfield
-        </>
-      )
-    },
-    {
-      source: "Image of Peterloo Massacre Monument",
+      source: "Image of Emmeline Pankhurst in Prison clothes, 1911",
       attribution: (
         <>
           <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license</a>
-          {" "}granted by <a href="https://www.geograph.org.uk/photo/6240951">Gerald England on Geograph.org.uk</a>
+          {" "}Unknown author - The Suffragette by Sylvia Pankhurst. New York: Source Book Press, 1970. First published by Sturgis & Walton Company (New York), 1911. Facing p. 330.
         </>
       )
     }
@@ -114,7 +105,7 @@ const EmmelinePankhurst: React.FC = () => {
     <>
       <div className="text-left text-xl mt-4">
         <Button label="View on map" href="https://maps.app.goo.gl/tXqp4aEkBQsZE1CK9?g_st=com.google.maps.preview.copy" />
-        <p className="mt-4">Go to the <a href="https://maps.app.goo.gl/tXqp4aEkBQsZE1CK9?g_st=com.google.maps.preview.copy">Emmeline Pankhurst Statue</a>, play the music below and when you’re near say to the AI &ldquo;I’m arriving at the Emmeline Pankhurst Statue&rdquo;</p>
+        <p className="mt-4">Go to the <a className="underline" href="https://maps.app.goo.gl/tXqp4aEkBQsZE1CK9?g_st=com.google.maps.preview.copy">Emmeline Pankhurst Statue</a>, play the music below and when you’re near say to the AI &ldquo;I’m arriving at the Emmeline Pankhurst Statue&rdquo;</p>
       </div>
       <Music
         title="March of the Women"

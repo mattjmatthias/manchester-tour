@@ -12,6 +12,7 @@ import NorthernQuarter from "@/components/ui/stops/NorthernQuarter";
 import Ancoats from "@/components/ui/stops/Ancoats";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
+import Goodbye from "@/components/ui/stops/Goodbye";
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -28,6 +29,7 @@ export default function Home() {
     { title: "Emmeline Pankhurst", sub: "The Suffragettes", component: <EmmelinePankhurst /> },
     { title: "Northern Quarter", sub: "The Old Mills of Cottonopolis", component: <NorthernQuarter /> },
     { title: "Ancoats", sub: "The World's 1st Industrial Suburb", component: <Ancoats /> },
+    { title: "The End", sub: "And 1 Last Song", component: <Goodbye /> },
   ];
 
   useEffect(() => {
@@ -63,14 +65,14 @@ export default function Home() {
                 height={20}
                 className="mr-2 filter grayscale brightness-0"
               />
-              2 hours walking, mostly flat
+              1 hour’s walking, wheelchair accessible
             </p>
           </div>
 
           {/* Right section with buttons */}
           <div className="flex md:flex-col md:text-xl text-lg flex-row md:gap-y-2 md:gap-x-0 gap-x-4 mt-8 md:mt-0 md:mb-0 mb-4 md:ml-8">
             <Button href="./before-you-start" label="Before you start" />
-            <Button href="https://maps.app.goo.gl/T3k76Nt9zYAuG4BG8?g_st=ic" label="View tour route" />
+            <Button href="https://maps.app.goo.gl/jqzBWwiNLsRHJngLA" label="View tour route" />
           </div>
         </div>
 
@@ -94,6 +96,9 @@ export default function Home() {
         </Link>
         <Link href="/before-you-start" className="mr-8">
           Support
+        </Link>                
+        <Link href="https://www.mattjmatthias.co" className="mr-8">
+          by Matt Matthias
         </Link>
       </footer>
     </div>

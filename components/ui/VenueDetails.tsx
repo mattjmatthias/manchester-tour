@@ -1,5 +1,3 @@
-// components/VenueDetails.tsx
-
 import type { NextPage } from "next";
 import Image from "next/image";
 
@@ -11,7 +9,7 @@ export type VenueDetailsType = {
 
 const VenueDetails: NextPage<VenueDetailsType> = ({ imgSrc, title, href }) => {
   return (
-    <div className="flex flex-col text-left text-md max-w-[150px] md:max-w-[200px]">
+    <div className="flex flex-col text-left text-md w-full max-w-[99%] mx-auto">
       <a
         href={href}
         className="no-underline text-black"
@@ -19,7 +17,7 @@ const VenueDetails: NextPage<VenueDetailsType> = ({ imgSrc, title, href }) => {
         rel="noopener noreferrer"
       >
         {/* Image Container */}
-        <div className="relative w-[190px] h-[130px] md:w-[200px] md:h-[140px] overflow-hidden">
+        <div className="relative w-full h-[28vw] md:h-[30vw] lg:h-[40vw] max-h-[250px] md:max-h-[300px] lg:max-h-[150px] xl:max-h-[250px] overflow-hidden">
           <Image
             src={imgSrc || "/placeholder.jpg"}
             alt={title || "Venue Image"}
@@ -30,7 +28,7 @@ const VenueDetails: NextPage<VenueDetailsType> = ({ imgSrc, title, href }) => {
         </div>
 
         {/* Title */}
-        <div className="pt-1 italic">
+        <div className="pt-1 italic text-sm">
           {title}
         </div>
       </a>

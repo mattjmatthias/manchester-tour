@@ -69,7 +69,7 @@ const FriedrichEngels: React.FC = () => {
     { title: "Home", imgSrc: "/venues/home.png", href: "http://homemcr.org/" },
     { title: "Indian Tiffin Room", imgSrc: "/venues/indian-tiffin.png", href: "http://indiantiffinroom.com/" },
     { title: "Gas Works Brew Bar and Kitchen", imgSrc: "/venues/gasworks.png", href: "https://gasworksbrewbar.co.uk/" },
-    { title: "Atlas Bar", imgSrc: "/venus/atlas.png", href: "http://www.atlasbarmanchester.com/ "}
+    { title: "Atlas Bar", imgSrc: "/venues/atlas.png", href: "http://www.atlasbarmanchester.com/ "}
   ]
   
   
@@ -90,7 +90,7 @@ const FriedrichEngels: React.FC = () => {
       <div className="text-left text-xl mt-4">
         <Button label="View on map" href="https://maps.app.goo.gl/deNTGd9yYp1pPPy87?g_st=com.google.maps.preview.copy" />
         <p className="mt-4">
-          Go to the <a href="https://maps.app.goo.gl/deNTGd9yYp1pPPy87?g_st=com.google.maps.preview.copy">Friedrich Statue</a>, play the song below and when you’re near say to the AI &ldquo;I’m arriving at the Friedrich Engels statue&rdquo;
+          Go to the <a className="underline" href="https://maps.app.goo.gl/deNTGd9yYp1pPPy87?g_st=com.google.maps.preview.copy">Friedrich Statue</a>, play the song below and when you’re near say to the AI &ldquo;I’m arriving at the Friedrich Engels statue&rdquo;
         </p>
       </div>
       <Music

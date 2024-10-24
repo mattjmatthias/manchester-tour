@@ -30,7 +30,7 @@ const StPetersField: React.FC = () => {
     },
     {
       href: "/monument.jpg",
-      caption: "Map of St Peter's Field, 1801",
+      caption: "Photo of Peterloo Massacre Monument",
       width: 788,
       height: 542,
       thumbnailWidth: 265,
@@ -114,7 +114,7 @@ const StPetersField: React.FC = () => {
     <>
       <div className="text-left text-xl mt-4">
         <Button label="View on map" href="https://maps.app.goo.gl/iGH5kYa1q4h7BAiCA?g_st=com.google.maps.preview.copy" />
-        <p className="mt-4">Go to the <a href="https://maps.app.goo.gl/iGH5kYa1q4h7BAiCA?g_st=com.google.maps.preview.copy">Peterloo Memorial</a>, play the music below and when you’re near say to the AI &ldquo;I’m arriving at the Peterloo Memorial&rdquo;</p>
+        <p className="mt-4">Go to the <a className="underline" href="https://maps.app.goo.gl/iGH5kYa1q4h7BAiCA?g_st=com.google.maps.preview.copy">Peterloo Memorial</a>, play the music below and when you’re near say to the AI &ldquo;I’m arriving at the Peterloo Memorial&rdquo;</p>
       </div>
       <Music
         title="Spiegel im Spiegel (Excerpt)"
@@ -125,7 +125,7 @@ const StPetersField: React.FC = () => {
       />
       <Media images={images} />
       <Links links={links} />
-      <Questions questions={questions} location="Friedrich Engels" /> 
+      <Questions questions={questions} location="the Peterloo Massacre" /> 
       <Venues venues={venues}/>
       <Attributions attributions={attributions} />
       <Divider />

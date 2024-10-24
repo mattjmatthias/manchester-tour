@@ -5,24 +5,25 @@ import Music from "../Music";
 import Media, { MediaItemProps } from "../Media";
 import Links, { LinkProps } from "../Links";
 import Questions, { QuestionProps } from "../Questions";
+import Venues, { VenueProps } from "../Venues";
 
 const NorthernQuarter: React.FC = () => {
   const musicHref = MusicProvider({ songKey: "Northern Quarter", index: 0 });
   const images: MediaItemProps[] = [
     {
-      href: "/map-1801.png",
-      caption: "Map of Castlefield, 1801",
-      width: 795,
-      height: 508,
-      thumbnailWidth: 293,
+      href: "/dale-house.jpg",
+      caption: "Dale House, Dale Street",
+      width: 623,
+      height: 421,
+      thumbnailWidth: 280,
       thumbnailHeight: 187,
     },
     {
-      href: "/castlefield-basin.jpg",
-      caption: "Bridgewater Canal Basin, Castlefield, Manchester",
-      width: 1024,
-      height: 768,
-      thumbnailWidth: 250,
+      href: "/smithfield.png",
+      caption: "Smithfield Market, Northern Quarter, 1907",
+      width: 816,
+      height: 642,
+      thumbnailWidth: 240,
       thumbnailHeight: 187,
     },
   ];
@@ -31,32 +32,43 @@ const NorthernQuarter: React.FC = () => {
       url: "https://historicengland.org.uk/images-books/publications/manchesters-northern-quarter/manchesters-northern-quarter/",
       caption: "Historic England: Manchester's Northern Quarter (pdf)",
     },
+    {
+      url: "https://en.wikipedia.org/wiki/Northern_Quarter_(Manchester)",
+      caption: "Wikipedia: Northern Quarter (Manchester)"
+    }
   ];
-  const questions: QuestionProps[] = [
+  const questions: QuestionProps[] = [    
     {
-      text: "How long did it take for the railway to replace the canals?",
+      text: "Is it true that Stevenson Square was originally planned to be a middle-class park with gardens?",
     },
     {
-      text: "What was Manchester's main industry before the industrial revolution?",
+      text: "What role does the Northern Quarter play in addressing issues like gentrification and the displacement of working-class communities in Manchester?",
     },
     {
-      text: "How did industrialisation influence the rise of labour movements and social reform?",
+      text: "How does the history of Affleck’s reflect the shift from Manchester’s industrial past to its creative present?",
     },
     {
-      text: "What role did Manchester play in global cotton production during the 19th century?",
+      text: "When did the Northern Quarter start to decline from its peak as an industrial hub?",
     },
     {
-      text: "How did the arrival of the railway change the layout of Manchester?",
-    },
+      text: "How has the Northern Quarter maintained its identity as a place for activism and creativity while undergoing commercial development?",
+    }
   ];
-
+  
+  const venues: VenueProps[] = [
+    { title: "7Sins, Northern Quarter", imgSrc: "/venues/7sins.png", href: "https://www.7sins.co.uk/" },
+    { title: "English Lounge NQ", imgSrc: "/venues/english-lounge.png", href: "https://www.craftunionpubs.com/english-lounge-manchester" },
+    { title: "Lost Cat", imgSrc: "/venues/lost-cat.png", href: "https://lostcatnq.co.uk/" },
+    { title: "Junior Jackon's", imgSrc: "/venues/junior-jacksons.png", href: "https://bunnyjacksons.co.uk/" },
+    { title: "Tib Street Tavern", imgSrc: "/venues/tib-street.png", href: "https://www.tibstreettavern.co.uk/" },
+    { title: "Unicorn Manchester", imgSrc: "/venues/unicorn.png", href: "https://www.craftunionpubs.com/unicorn-manchester" },
+  ]
+  
   return (
-    <>
+    <>      
       <div className="text-left text-xl mt-4">
-        <Button label="View on map" href="/" />
-        <p className="mt-4">
-          Say to the AI &ldquo;I’m arriving at the Northern Quarter&rdquo;
-        </p>
+        <Button label="View on map" href="https://maps.app.goo.gl/v4mwD9izrU62AmK47?g_st=com.google.maps.preview.copy" />
+        <p className="mt-4">Go to the <a className="underline" href="https://maps.app.goo.gl/v4mwD9izrU62AmK47?g_st=com.google.maps.preview.copy">Dale House in the Northern Quarter</a>, play the music below and when you’re near say to the AI &ldquo;I’m arriving at the Northern Quarter&rdquo;</p>
       </div>
       <Music
         title="Captain Ward"
@@ -67,7 +79,8 @@ const NorthernQuarter: React.FC = () => {
       />
       <Media images={images} />
       <Links links={links} />
-      <Questions questions={questions} location="Castlefield" />
+      <Questions questions={questions} location="the Northern Quarter" />      
+      <Venues venues={venues}/>
       
       <Divider />
     </>
