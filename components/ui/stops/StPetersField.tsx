@@ -14,7 +14,7 @@ const StPetersField: React.FC = () => {
   const images: MediaItemProps[] = [
     {
       href: "/peterloo-massacre.png",
-      caption: "Statue of Friedrich Engels, Tony Wilson Square, 2019",
+      caption: "Coloured print of the Peterloo Massacre",
       width: 1280,
       height: 853,
       thumbnailWidth: 300,
