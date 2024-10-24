@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react'
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
-//import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin'
+import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin'
 import 'photoswipe/style.css'
 import 'photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css'
 
@@ -21,12 +21,13 @@ export default function SimpleGallery(props) {
         }
       },
     })
-
-    /*const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+    
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
       // Plugins options, for example:
       type: 'auto',
-    })*/
-
+    })
+    
     lightbox.init()
 
     return () => {

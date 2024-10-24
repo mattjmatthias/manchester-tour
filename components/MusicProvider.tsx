@@ -11,9 +11,9 @@ const musicData: MusicData = {
     "https://youtu.be/o7wc-mSVbhk?si=bDTPZyXu7Ie-Ht-J",
   ],
   "Friedrich Engels": [
-    "",
-    "",
-    ""
+    "https://open.spotify.com/track/7lBirStriJlmSTvPzHByal?si=74fe29e827ad4188",
+    "https://music.apple.com/gb/album/the-world-turned-upside-down/1169783065?i=1169783582",
+    "https://youtu.be/SWRpl2S9iwk?si=T9JVatXlwNkj02PG"
   ],  
   "St Peter's Field": [
     "https://open.spotify.com/track/2KMr9cGZCqmc7CArKuqnK6?si=cba4eb9d44774b95",

@@ -19,3 +19,7 @@ body {
   background: var(--background);
   font-family: Cardo, serif;
 }
+
+.attribution-links a {
+  text-decoration: underline;
+}

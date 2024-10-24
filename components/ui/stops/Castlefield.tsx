@@ -5,6 +5,8 @@ import Music from "../Music";
 import Media, { MediaItemProps } from "../Media";
 import Links, { LinkProps } from "../Links";
 import Questions, { QuestionProps } from "../Questions";
+import Venues, { VenueProps } from "../Venues";
+import Attributions, { AttributionProps } from "../Attributions";
 
 const Castlefield: React.FC = () => {
   const musicHref = MusicProvider({ songKey: "Castlefield", index: 0 });
@@ -25,15 +27,27 @@ const Castlefield: React.FC = () => {
       thumbnailWidth: 250,
       thumbnailHeight: 187,
     },
+    {
+      href: "/stephenson-lmr-map.jpg",
+      caption: "Plan of the proposed route of the Liverpool to Manchester Railway by George Stephenson, 1824",
+      width: 900,
+      height: 599,
+      thumbnailWidth: 281,
+      thumbnailHeight: 187,
+    }
   ];
   const links: LinkProps[] = [
     {
-      url: "https://library.chethams.com",
-      caption: "Chetham Library",
+        url: "https://historicengland.org.uk/images-books/publications/manchester-warehouse-legacy/manchester-the-warehouse-legacy/",
+        caption: "History England: Manchester The Warehouse Legacy, page 15"
     },
     {
-      url: "https://www.imdb.com/title/tt4614612/",
-      caption: "Peterloo (2018)",
+      url: "https://www.railwaymuseum.org.uk/objects-and-stories/stephensons-rocket-rainhill-and-rise-locomotive",
+      caption: "Railway Museum: Stephenson's Rocket, Rainhill and the Rise of the Locomotive",
+    },
+    {
+      url: "https://www.scienceandindustrymuseum.org.uk/objects-and-stories/making-the-liverpool-and-manchester-railway",
+      caption: "Science + Industry Museum: First in the World: The Making of the Liverpool and Manchester Railway",
     },
   ];
   const questions: QuestionProps[] = [
@@ -53,13 +67,33 @@ const Castlefield: React.FC = () => {
       text: "How did the arrival of the railway change the layout of Manchester?",
     },
   ];
+  
+  const venues: VenueProps[] = [
+    { title: "Dukes 92", imgSrc: "/venues/dukes.png", href: "https://dukes92.com/" },
+    { title: "Albert's Shed", imgSrc: "/venues/alberts-shed.png", href: "https://alberts-restaurants.com/shed/" },
+    { title: "Barça", imgSrc: "/venues/barca.png", href: "http://barca-manchester.co.uk/" },
+    { title: "The Wharf", imgSrc: "/venues/thewharf.png", href: "https://www.thewharf-castlefield.co.uk/" },
+  ]
+  
+  const attributions: AttributionProps[] = [
+    {
+      source: "Bridgewater Canal, Castlefield Basin image",
+      attribution: (
+        <>
+          <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license</a>
+          {" "}granted by <a href="https://www.geograph.org.uk/photo/6966336">David Dixon on Geograph.org.uk</a>
+        </>
+      ),
+    },
+  ];
 
   return (
     <>
       <div className="text-left text-xl mt-4">
-        <Button label="View on map" href="/" />
+        <Button label="View on map" href="https://maps.app.goo.gl/KE1GrChFpa9WJU24A?g_st=ic" />
         <p className="mt-4">
-          Say to the AI &ldquo;I’m arriving at Castlefield&rdquo;
+          Head for Castlefield Viaduct Visitors Centre, and when you’re a few minutes away
+          , say to the AI &ldquo;I’m arriving at Castlefield&rdquo;
         </p>
       </div>
       <Music
@@ -72,7 +106,8 @@ const Castlefield: React.FC = () => {
       <Media images={images} />
       <Links links={links} />
       <Questions questions={questions} location="Castlefield" />
-      
+      <Venues venues={venues}/>
+      <Attributions attributions={attributions} />
       <Divider />
     </>
   );
