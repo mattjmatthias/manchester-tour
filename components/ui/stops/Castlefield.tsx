@@ -92,8 +92,8 @@ const Castlefield: React.FC = () => {
       <div className="text-left text-xl mt-4">
         <Button label="View on map" href="https://maps.app.goo.gl/KE1GrChFpa9WJU24A?g_st=ic" />
         <p className="mt-4">
-          Head for Castlefield Viaduct Visitors Centre, and when you’re a few minutes away
-          , say to the AI &ldquo;I’m arriving at Castlefield&rdquo;
+          Head for <a href="https://maps.app.goo.gl/KE1GrChFpa9WJU24A?g_st=ic" className="underline">Castlefield Viaduct Visitors Centre</a>, and when you’re a few minutes away,
+          {" "}say to the AI &ldquo;I’m arriving at Castlefield&rdquo;
         </p>
       </div>
       <Music
