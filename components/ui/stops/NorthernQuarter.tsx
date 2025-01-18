@@ -19,7 +19,7 @@ const NorthernQuarter: React.FC = () => {
       thumbnailHeight: 187,
     },
     {
-      href: "/smithfield.png",
+      href: "/smithfield.jpg",
       caption: "Smithfield Market, Northern Quarter, 1907",
       width: 816,
       height: 642,
@@ -56,12 +56,12 @@ const NorthernQuarter: React.FC = () => {
   ];
   
   const venues: VenueProps[] = [
-    { title: "7Sins, Northern Quarter", imgSrc: "/venues/7sins.png", href: "https://www.7sins.co.uk/" },
-    { title: "English Lounge NQ", imgSrc: "/venues/english-lounge.png", href: "https://www.craftunionpubs.com/english-lounge-manchester" },
-    { title: "Lost Cat", imgSrc: "/venues/lost-cat.png", href: "https://lostcatnq.co.uk/" },
-    { title: "Junior Jackon's", imgSrc: "/venues/junior-jacksons.png", href: "https://bunnyjacksons.co.uk/" },
-    { title: "Tib Street Tavern", imgSrc: "/venues/tib-street.png", href: "https://www.tibstreettavern.co.uk/" },
-    { title: "Unicorn Manchester", imgSrc: "/venues/unicorn.png", href: "https://www.craftunionpubs.com/unicorn-manchester" },
+    { title: "7Sins, Northern Quarter", imgSrc: "/venues/7sins.jpg", href: "https://www.7sins.co.uk/" },
+    { title: "English Lounge NQ", imgSrc: "/venues/english-lounge.jpg", href: "https://www.craftunionpubs.com/english-lounge-manchester" },
+    { title: "Lost Cat", imgSrc: "/venues/lost-cat.jpg", href: "https://lostcatnq.co.uk/" },
+    { title: "Junior Jackon's", imgSrc: "/venues/junior-jacksons.jpg", href: "https://bunnyjacksons.co.uk/" },
+    { title: "Tib Street Tavern", imgSrc: "/venues/tib-street.jpg", href: "https://www.tibstreettavern.co.uk/" },
+    { title: "Unicorn Manchester", imgSrc: "/venues/unicorn.jpg", href: "https://www.craftunionpubs.com/unicorn-manchester" },
   ]
   
   return (
@@ -74,7 +74,7 @@ const NorthernQuarter: React.FC = () => {
         title="Captain Ward"
         artist="Spiers & Boden"
         runtime="4:13 mins"
-        image="/music/northern-quarter.png"
+        image="/music/northern-quarter.jpg"
         href={typeof musicHref === "string" ? musicHref : "#"}
       />
       <Media images={images} />

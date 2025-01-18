@@ -65,11 +65,11 @@ const FriedrichEngels: React.FC = () => {
   ];
   
   const venues: VenueProps[] = [
-    { title: "Briton's Protection", imgSrc: "/venues/britons-protection.png", href: "https://www.facebook.com/thebritonsprotection/" },
-    { title: "Home", imgSrc: "/venues/home.png", href: "http://homemcr.org/" },
-    { title: "Indian Tiffin Room", imgSrc: "/venues/indian-tiffin.png", href: "http://indiantiffinroom.com/" },
-    { title: "Gas Works Brew Bar and Kitchen", imgSrc: "/venues/gasworks.png", href: "https://gasworksbrewbar.co.uk/" },
-    { title: "Atlas Bar", imgSrc: "/venues/atlas.png", href: "http://www.atlasbarmanchester.com/ "}
+    { title: "Briton's Protection", imgSrc: "/venues/britons-protection.jpg", href: "https://www.facebook.com/thebritonsprotection/" },
+    { title: "Home", imgSrc: "/venues/home.jpg", href: "http://homemcr.org/" },
+    { title: "Indian Tiffin Room", imgSrc: "/venues/indian-tiffin.jpg", href: "http://indiantiffinroom.com/" },
+    { title: "Gas Works Brew Bar and Kitchen", imgSrc: "/venues/gasworks.jpg", href: "https://gasworksbrewbar.co.uk/" },
+    { title: "Atlas Bar", imgSrc: "/venues/atlas.jpg", href: "http://www.atlasbarmanchester.com/ "}
   ]
   
   
@@ -97,7 +97,7 @@ const FriedrichEngels: React.FC = () => {
         title="The World Turned Upside Down"
         artist="Billy Bragg"
         runtime="2:36 mins"
-        image="/music/friedrich-engels.png"
+        image="/music/friedrich-engels.jpg"
         href={typeof musicHref === "string" ? musicHref : "#"}
       />
       <Media images={images} />

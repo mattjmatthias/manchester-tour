@@ -75,9 +75,9 @@ const EmmelinePankhurst: React.FC = () => {
   ];
   
   const venues: VenueProps[] = [
-    { title: "Founders Hall", imgSrc: "/venues/founders.png", href: "https://www.foundershall.co.uk/" },
-    { title: "The Anthologist St Peter's Square", imgSrc: "/venues/anthologist.png", href: "https://www.drakeandmorgan.co.uk/the-anthologist-manchester" },
-    { title: "The Vine Inn", imgSrc: "/venues/vine-inn.png", href: "https://www.thevineinnmanchester.co.uk/" }    
+    { title: "Founders Hall", imgSrc: "/venues/founders.jpg", href: "https://www.foundershall.co.uk/" },
+    { title: "The Anthologist St Peter's Square", imgSrc: "/venues/anthologist.jpg", href: "https://www.drakeandmorgan.co.uk/the-anthologist-manchester" },
+    { title: "The Vine Inn", imgSrc: "/venues/vine-inn.jpg", href: "https://www.thevineinnmanchester.co.uk/" }    
   ]
   
   

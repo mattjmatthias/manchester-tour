@@ -16,7 +16,7 @@ const Goodbye: React.FC = () => {
         title="Song of Choice"
         artist="Peggy Seeger and Ewan MacColl"
         runtime="3:48 mins"
-        image="/music/choice.png"
+        image="/music/choice.jpg"
         href={typeof musicHref === "string" ? musicHref : "#"}
       />
 

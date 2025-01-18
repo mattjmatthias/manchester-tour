@@ -20,7 +20,7 @@ const Ancoats: React.FC = () => {
       thumbnailHeight: 187,
     },
     {
-      href: "/cuttingroom-square.png",
+      href: "/cuttingroom-square.jpg",
       caption: "Cutting Room Square, Ancoats, Manchester",
       width: 1024,
       height: 768,
@@ -73,12 +73,12 @@ const Ancoats: React.FC = () => {
   ];
   
   const venues: VenueProps[] = [
-    { title: "Mackie Mayor", imgSrc: "/venues/mackie-mayor.png", href: "https://maps.app.goo.gl/oQaYmPQ6BrD4ADNt9" },
-    { title: "The Crown & Kettle", imgSrc: "/venues/crown.png", href: "https://www.thecrownandkettle.com/" },
-    { title: "The Edinburgh Castle", imgSrc: "/venues/edinburgh.png", href: "https://www.ec-ancoats.com/" },
-    { title: "The Jayne Eyre", imgSrc: "/venues/jane-eyre.png", href: "https://www.thejaneeyre.co.uk/" },
-    { title: "Jimmy's Manchester", imgSrc: "/venues/jimmys.png", href: "https://www.jimmys.group/manchester/" },
-    { title: "Cask", imgSrc: "/venues/cask.png", href: "https://www.caskbars.co.uk/" }    
+    { title: "Mackie Mayor", imgSrc: "/venues/mackie-mayor.jpg", href: "https://maps.app.goo.gl/oQaYmPQ6BrD4ADNt9" },
+    { title: "The Crown & Kettle", imgSrc: "/venues/crown.jpg", href: "https://www.thecrownandkettle.com/" },
+    { title: "The Edinburgh Castle", imgSrc: "/venues/edinburgh.jpg", href: "https://www.ec-ancoats.com/" },
+    { title: "The Jayne Eyre", imgSrc: "/venues/jane-eyre.jpg", href: "https://www.thejaneeyre.co.uk/" },
+    { title: "Jimmy's Manchester", imgSrc: "/venues/jimmys.jpg", href: "https://www.jimmys.group/manchester/" },
+    { title: "Cask", imgSrc: "/venues/cask.jpg", href: "https://www.caskbars.co.uk/" }    
   ]
   
   

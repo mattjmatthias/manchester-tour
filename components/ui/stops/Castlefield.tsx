@@ -12,7 +12,7 @@ const Castlefield: React.FC = () => {
   const musicHref = MusicProvider({ songKey: "Castlefield", index: 0 });
   const images: MediaItemProps[] = [
     {
-      href: "/map-1801.png",
+      href: "/map-1801.jpg",
       caption: "Map of Castlefield, 1801",
       width: 795,
       height: 508,
@@ -69,10 +69,10 @@ const Castlefield: React.FC = () => {
   ];
   
   const venues: VenueProps[] = [
-    { title: "Dukes 92", imgSrc: "/venues/dukes.png", href: "https://dukes92.com/" },
-    { title: "Albert's Shed", imgSrc: "/venues/alberts-shed.png", href: "https://alberts-restaurants.com/shed/" },
-    { title: "Barça", imgSrc: "/venues/barca.png", href: "http://barca-manchester.co.uk/" },
-    { title: "The Wharf", imgSrc: "/venues/thewharf.png", href: "https://www.thewharf-castlefield.co.uk/" },
+    { title: "Dukes 92", imgSrc: "/venues/dukes.jpg", href: "https://dukes92.com/" },
+    { title: "Albert's Shed", imgSrc: "/venues/alberts-shed.jpg", href: "https://alberts-restaurants.com/shed/" },
+    { title: "Barça", imgSrc: "/venues/barca.jpg", href: "http://barca-manchester.co.uk/" },
+    { title: "The Wharf", imgSrc: "/venues/thewharf.jpg", href: "https://www.thewharf-castlefield.co.uk/" },
   ]
   
   const attributions: AttributionProps[] = [
@@ -100,7 +100,7 @@ const Castlefield: React.FC = () => {
         title="Dirty Old Town"
         artist="Ewan MacColl"
         runtime="1:03 mins"
-        image="/music/dirty-old-town.png"
+        image="/music/dirty-old-town.jpg"
         href={typeof musicHref === "string" ? musicHref : "#"}
       />
       <Media images={images} />

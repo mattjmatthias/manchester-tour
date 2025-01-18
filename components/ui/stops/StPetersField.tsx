@@ -13,7 +13,7 @@ const StPetersField: React.FC = () => {
 
   const images: MediaItemProps[] = [
     {
-      href: "/peterloo-massacre.png",
+      href: "/peterloo-massacre.jpg",
       caption: "Coloured print of the Peterloo Massacre",
       width: 1280,
       height: 853,
@@ -21,7 +21,7 @@ const StPetersField: React.FC = () => {
       thumbnailHeight: 187,
     },
     {
-      href: "/peters-field.png",
+      href: "/peters-field.jpg",
       caption: "Map of St Peter's Field, 1801",
       width: 788,
       height: 542,
@@ -74,11 +74,11 @@ const StPetersField: React.FC = () => {
   ];
   
   const venues: VenueProps[] = [
-    { title: "Society", imgSrc: "/venues/society.png", href: "http://www.societymanchester.com/" },
-    { title: "The Temple (Temple of Convenience)", imgSrc: "/venues/temple.png", href: "https://www.facebook.com/pages/The-Temple-of-Convenience/156811607675271?fref=ts" },
-    { title: "Ezra & Gil - Peter Street", imgSrc: "/venues/ezra.png", href: "http://www.ezraandgil.co.uk/" },
-    { title: "Albert's Schloss", imgSrc: "/venues/alberts-schloss.png", href: "https://albertsschloss.com/" },   
-    { title: "Peaky Blinders Manchester", imgSrc: "/venues/peaky.png", href: "https://www.peakyblindersmanchester.com/" }
+    { title: "Society", imgSrc: "/venues/society.jpg", href: "http://www.societymanchester.com/" },
+    { title: "The Temple (Temple of Convenience)", imgSrc: "/venues/temple.jpg", href: "https://www.facebook.com/pages/The-Temple-of-Convenience/156811607675271?fref=ts" },
+    { title: "Ezra & Gil - Peter Street", imgSrc: "/venues/ezra.jpg", href: "http://www.ezraandgil.co.uk/" },
+    { title: "Albert's Schloss", imgSrc: "/venues/alberts-schloss.jpg", href: "https://albertsschloss.com/" },   
+    { title: "Peaky Blinders Manchester", imgSrc: "/venues/peaky.jpg", href: "https://www.peakyblindersmanchester.com/" }
   ]
   
   
@@ -120,7 +120,7 @@ const StPetersField: React.FC = () => {
         title="Spiegel im Spiegel (Excerpt)"
         artist="Arvo Pärt, Tasmin Little, Martin Roscoe"
         runtime="4:05 mins"
-        image="/music/spiegel-em-spiegel.png"
+        image="/music/spiegel-em-spiegel.jpg"
         href={typeof musicHref === 'string' ? musicHref : '#'}
       />
       <Media images={images} />
