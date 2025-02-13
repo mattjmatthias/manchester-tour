@@ -1,4 +1,8 @@
+"use client";
+
+import React from "react";
 import MusicProvider from "@/components/MusicProvider";
+import StopProps from "@/components/ui/stops/StopProps";
 import Button from "../Button";
 import Divider from "../Divider";
 import Music from "../Music";
@@ -7,13 +11,16 @@ import Links, { LinkProps } from "../Links";
 import Questions, { QuestionProps } from "../Questions";
 import Venues, { VenueProps } from "../Venues";
 import Attributions, { AttributionProps } from "../Attributions";
+import { useTranslation } from "next-i18next";
 
-const Castlefield: React.FC = () => {
-  const musicHref = MusicProvider({ songKey: "Castlefield", index: 0 });
+const Castlefield: React.FC<StopProps> = ({ musicIndex }) => {
+  const { t } = useTranslation("common");
+  const musicHref = MusicProvider({ songKey: "Castlefield", index: musicIndex });
+
   const images: MediaItemProps[] = [
     {
       href: "/map-1801.jpg",
-      caption: "Map of Castlefield, 1801",
+      caption: t("castlefield.mapCaption"),
       width: 795,
       height: 508,
       thumbnailWidth: 293,
@@ -21,7 +28,7 @@ const Castlefield: React.FC = () => {
     },
     {
       href: "/castlefield-basin.jpg",
-      caption: "Bridgewater Canal Basin, Castlefield, Manchester",
+      caption: t("castlefield.basinsCaption"),
       width: 1024,
       height: 768,
       thumbnailWidth: 250,
@@ -29,59 +36,66 @@ const Castlefield: React.FC = () => {
     },
     {
       href: "/stephenson-lmr-map.jpg",
-      caption: "Plan of the proposed route of the Liverpool to Manchester Railway by George Stephenson, 1824",
+      caption: t("castlefield.stephensonCaption"),
       width: 900,
       height: 599,
       thumbnailWidth: 281,
       thumbnailHeight: 187,
     }
   ];
+
   const links: LinkProps[] = [
     {
-        url: "https://historicengland.org.uk/images-books/publications/manchester-warehouse-legacy/manchester-the-warehouse-legacy/",
-        caption: "History England: Manchester The Warehouse Legacy, page 15"
+      url: "https://historicengland.org.uk/images-books/publications/manchester-warehouse-legacy/manchester-the-warehouse-legacy/",
+      caption: t("castlefield.linkHistoryEngland"),
     },
     {
       url: "https://www.railwaymuseum.org.uk/objects-and-stories/stephensons-rocket-rainhill-and-rise-locomotive",
-      caption: "Railway Museum: Stephenson's Rocket, Rainhill and the Rise of the Locomotive",
+      caption: t("castlefield.linkRailwayMuseum"),
     },
     {
       url: "https://www.scienceandindustrymuseum.org.uk/objects-and-stories/making-the-liverpool-and-manchester-railway",
-      caption: "Science + Industry Museum: First in the World: The Making of the Liverpool and Manchester Railway",
+      caption: t("castlefield.linkScienceIndustryMuseum"),
     },
   ];
+
   const questions: QuestionProps[] = [
     {
-      text: "How long did it take for the railway to replace the canals?",
+      text: t("castlefield.questionRailwayCanals"),
     },
     {
-      text: "What was Manchester's main industry before the industrial revolution?",
+      text: t("castlefield.questionMainIndustry"),
     },
     {
-      text: "How did industrialisation influence the rise of labour movements and social reform?",
+      text: t("castlefield.questionIndustrialisation"),
     },
     {
-      text: "What role did Manchester play in global cotton production during the 19th century?",
+      text: t("castlefield.questionCottonProduction"),
     },
     {
-      text: "How did the arrival of the railway change the layout of Manchester?",
+      text: t("castlefield.questionRailwayLayout"),
     },
   ];
   
   const venues: VenueProps[] = [
-    { title: "Dukes 92", imgSrc: "/venues/dukes.jpg", href: "https://dukes92.com/" },
-    { title: "Albert's Shed", imgSrc: "/venues/alberts-shed.jpg", href: "https://alberts-restaurants.com/shed/" },
-    { title: "Barça", imgSrc: "/venues/barca.jpg", href: "http://barca-manchester.co.uk/" },
-    { title: "The Wharf", imgSrc: "/venues/thewharf.jpg", href: "https://www.thewharf-castlefield.co.uk/" },
-  ]
+    { title: t("castlefield.venueDukes92"), imgSrc: "/venues/dukes.jpg", href: "https://dukes92.com/" },
+    { title: t("castlefield.venueAlbertsShed"), imgSrc: "/venues/alberts-shed.jpg", href: "https://alberts-restaurants.com/shed/" },
+    { title: t("castlefield.venueBarca"), imgSrc: "/venues/barca.jpg", href: "http://barca-manchester.co.uk/" },
+    { title: t("castlefield.venueTheWharf"), imgSrc: "/venues/thewharf.jpg", href: "https://www.thewharf-castlefield.co.uk/" },
+  ];
   
   const attributions: AttributionProps[] = [
     {
-      source: "Bridgewater Canal, Castlefield Basin image",
+      source: t("castlefield.attributionSource"),
       attribution: (
         <>
-          <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license</a>
-          {" "}granted by <a href="https://www.geograph.org.uk/photo/6966336">David Dixon on Geograph.org.uk</a>
+          <a href="https://creativecommons.org/licenses/by-sa/2.0/">
+            {t("castlefield.attributionLicense")}
+          </a>{" "}
+          {t("castlefield.attributionGranted")}{" "}
+          <a href="https://www.geograph.org.uk/photo/6966336">
+            {t("castlefield.attributionPhotographer")}
+          </a>
         </>
       ),
     },
@@ -90,23 +104,25 @@ const Castlefield: React.FC = () => {
   return (
     <>
       <div className="text-left text-xl mt-4">
-        <Button label="View on map" href="https://maps.app.goo.gl/KE1GrChFpa9WJU24A?g_st=ic" />
+        <Button label={t("castlefield.viewOnMap")} href="https://maps.app.goo.gl/KE1GrChFpa9WJU24A?g_st=ic" />
         <p className="mt-4">
-          Head for <a href="https://maps.app.goo.gl/KE1GrChFpa9WJU24A?g_st=ic" className="underline">Castlefield Viaduct Visitors Centre</a>, play the song below and when you’re near
-          say to the AI &ldquo;I’m arriving at Castlefield&rdquo;
+          {t("castlefield.instructionsPrefix")}{" "}
+          <a href="https://maps.app.goo.gl/KE1GrChFpa9WJU24A?g_st=ic" className="underline">
+            {t("castlefield.visitorsCentre")}
+          </a>, {t("castlefield.instructionsSuffix")}
         </p>
       </div>
       <Music
-        title="Dirty Old Town"
-        artist="Ewan MacColl"
-        runtime="1:03 mins"
+        title={t("castlefield.musicTitle")}
+        artist={t("castlefield.musicArtist")}
+        runtime={t("castlefield.musicRuntime")}
         image="/music/dirty-old-town.jpg"
         href={typeof musicHref === "string" ? musicHref : "#"}
       />
       <Media images={images} />
       <Links links={links} />
-      <Questions questions={questions} location="Castlefield" />
-      <Venues venues={venues}/>
+      <Questions questions={questions} location={t("castlefield.locationName")} />
+      <Venues venues={venues} />
       <Attributions attributions={attributions} />
       <Divider />
     </>

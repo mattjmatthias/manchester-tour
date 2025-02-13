@@ -8,6 +8,8 @@ type StopProps = {
   sub: string;
   children?: React.ReactNode;
   isOpen: boolean;
+  musicIndex: number;
+  language: string;
   onClick: () => void;
 };
 

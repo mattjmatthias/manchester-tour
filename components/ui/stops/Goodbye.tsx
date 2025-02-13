@@ -1,25 +1,29 @@
+"use client";
+
 import MusicProvider from "@/components/MusicProvider";
+import StopProps from "@/components/ui/stops/StopProps";
 import Divider from "../Divider";
 import Music from "../Music";
+import { useTranslation } from "next-i18next";
 
-const Goodbye: React.FC = () => {
-  const musicHref = MusicProvider({ songKey: "End", index: 0 });
+const Goodbye: React.FC<StopProps> = ({ musicIndex }) => {
+  const { t } = useTranslation("common");
+  const musicHref = MusicProvider({ songKey: "End", index: musicIndex });
 
   return (
     <>
-      <div className="text-left text-xl mt-4">        
+      <div className="text-left text-xl mt-4">
         <p className="mt-4">
-          We hope you’ve enjoyed this tour and learned something new about Manchester and its history. We’d like to leave you with one last song, one which we feel captures the fighting spirit of Manchester and the fight for what’s fair and right.
+          {t("goodbye.text")}
         </p>
       </div>
       <Music
-        title="Song of Choice"
-        artist="Peggy Seeger and Ewan MacColl"
-        runtime="3:48 mins"
+        title={t("goodbye.musicTitle")}
+        artist={t("goodbye.musicArtist")}
+        runtime={t("goodbye.musicRuntime")}
         image="/music/choice.jpg"
         href={typeof musicHref === "string" ? musicHref : "#"}
       />
-
       <Divider />
     </>
   );

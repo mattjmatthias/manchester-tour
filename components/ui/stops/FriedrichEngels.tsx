@@ -1,19 +1,26 @@
+"use client";
+
+import React from "react";
 import MusicProvider from "@/components/MusicProvider";
+import StopProps from "@/components/ui/stops/StopProps";
 import Button from "../Button";
 import Divider from "../Divider";
 import Music from "../Music";
 import Media, { MediaItemProps } from "../Media";
 import Links, { LinkProps } from "../Links";
 import Questions, { QuestionProps } from "../Questions";
-import Attributions, { AttributionProps } from "../Attributions";
 import Venues, { VenueProps } from "../Venues";
+import Attributions, { AttributionProps } from "../Attributions";
+import { useTranslation } from "next-i18next";
 
-const FriedrichEngels: React.FC = () => {
-  const musicHref = MusicProvider({ songKey: "Friedrich Engels", index: 0 });
+const FriedrichEngels: React.FC<StopProps> = ({ musicIndex }) => {
+  const { t } = useTranslation("common");
+  const musicHref = MusicProvider({ songKey: "Friedrich Engels", index: musicIndex });
+
   const images: MediaItemProps[] = [
     {
       href: "/friedrich-engels.jpg",
-      caption: "Statue of Friedrich Engels, Tony Wilson Square, 2019",
+      caption: t("friedrich.imageCaptionStatue"),
       width: 3000,
       height: 4000,
       thumbnailWidth: 150,
@@ -21,89 +28,91 @@ const FriedrichEngels: React.FC = () => {
     },
     {
       href: "/young-engels.jpg",
-      caption: "Photo of Friedrich Engels in his youth",
+      caption: t("friedrich.imageCaptionYoung"),
       width: 800,
       height: 531,
       thumbnailWidth: 300,
       thumbnailHeight: 187,
-    },
+    }
   ];
+
   const links: LinkProps[] = [
     {
       url: "https://library.chethams.com",
-      caption: "Chetham Library",
+      caption: t("friedrich.linkChethamLibrary"),
     },
     {
       url: "https://confidentials.com/manchester/friedrich-engels-HOME-first-street-manchester-was-his-return-right-or-wrong",
-      caption: "Confidentials: The return of Friedrich Engels - right or wrong?"
+      caption: t("friedrich.linkConfidentials"),
     },
     {
       url: "https://youtu.be/ZAhceJjX8iQ?si=O1e4NMqzBsQ4KiII",
-      caption: "YouTube: Karl Marx and Friedrich Engels"
+      caption: t("friedrich.linkYouTube"),
     },
     {
       url: "http://news.bbc.co.uk/local/manchester/hi/people_and_places/history/newsid_8233000/8233388.stm",
-      caption: "BBC: Angel Meadow: 'Hell upon Earth'"
+      caption: t("friedrich.linkBBC"),
     }
   ];
+
   const questions: QuestionProps[] = [
-    {
-      text: "How did Engels’ experiences in Manchester shape his views on industrial capitalism?",
-    },
-    {
-      text: "What role did Engels play in documenting the lives of Manchester’s working class?",
-    },
-    {
-      text: "How did Engels balance his role as a mill owner with his socialist beliefs?",
-    },
-    {
-      text: "In what ways did Engels’ observations of Manchester’s slums influence his later work with Marx?",
-    },
-    {
-      text: "How did Engels’ time in Manchester affect his personal development and political ideology?",
-    },
+    { text: t("friedrich.questionExperiences") },
+    { text: t("friedrich.questionDocumentation") },
+    { text: t("friedrich.questionMillOwner") },
+    { text: t("friedrich.questionObservations") },
+    { text: t("friedrich.questionPersonalDevelopment") }
   ];
-  
+
   const venues: VenueProps[] = [
-    { title: "Briton's Protection", imgSrc: "/venues/britons-protection.jpg", href: "https://www.facebook.com/thebritonsprotection/" },
-    { title: "Home", imgSrc: "/venues/home.jpg", href: "http://homemcr.org/" },
-    { title: "Indian Tiffin Room", imgSrc: "/venues/indian-tiffin.jpg", href: "http://indiantiffinroom.com/" },
-    { title: "Gas Works Brew Bar and Kitchen", imgSrc: "/venues/gasworks.jpg", href: "https://gasworksbrewbar.co.uk/" },
-    { title: "Atlas Bar", imgSrc: "/venues/atlas.jpg", href: "http://www.atlasbarmanchester.com/ "}
-  ]
-  
-  
+    { title: t("friedrich.venueBritonsProtection"), imgSrc: "/venues/britons-protection.jpg", href: "https://www.facebook.com/thebritonsprotection/" },
+    { title: t("friedrich.venueHome"), imgSrc: "/venues/home.jpg", href: "http://homemcr.org/" },
+    { title: t("friedrich.venueIndianTiffin"), imgSrc: "/venues/indian-tiffin.jpg", href: "http://indiantiffinroom.com/" },
+    { title: t("friedrich.venueGasWorks"), imgSrc: "/venues/gasworks.jpg", href: "https://gasworksbrewbar.co.uk/" },
+    { title: t("friedrich.venueAtlasBar"), imgSrc: "/venues/atlas.jpg", href: "http://www.atlasbarmanchester.com/" }
+  ];
+
   const attributions: AttributionProps[] = [
     {
-      source: "Image of Friedrich Engels Statue",
+      source: t("friedrich.attributionSource"),
       attribution: (
         <>
-          <a href="https://creativecommons.org/publicdomain/zero/1.0/">Public Domain license</a>
-          {" "}granted by <a href="https://flickr.com/photos/53921762@N00/40809508363">Alan Stanton on Flickr</a>
+          <a href="https://creativecommons.org/publicdomain/zero/1.0/">
+            {t("friedrich.attributionPublicDomain")}
+          </a>{" "}
+          {t("friedrich.attributionGranted")}{" "}
+          <a href="https://flickr.com/photos/53921762@N00/40809508363">
+            {t("friedrich.attributionAlanStanton")}
+          </a>
         </>
       ),
-    },
+    }
   ];
 
   return (
     <>
       <div className="text-left text-xl mt-4">
-        <Button label="View on map" href="https://maps.app.goo.gl/deNTGd9yYp1pPPy87?g_st=com.google.maps.preview.copy" />
+        <Button
+          label={t("friedrich.viewOnMap")}
+          href="https://maps.app.goo.gl/deNTGd9yYp1pPPy87?g_st=com.google.maps.preview.copy"
+        />
         <p className="mt-4">
-          Go to the <a className="underline" href="https://maps.app.goo.gl/deNTGd9yYp1pPPy87?g_st=com.google.maps.preview.copy">Friedrich Statue</a>, play the song below and when you’re near say to the AI &ldquo;I’m arriving at the Friedrich Engels statue&rdquo;
+          {t("friedrich.instructionsPrefix")}{" "}
+          <a className="underline" href="https://maps.app.goo.gl/deNTGd9yYp1pPPy87?g_st=com.google.maps.preview.copy">
+            {t("friedrich.statueName")}
+          </a>, {t("friedrich.instructionsSuffix")}
         </p>
       </div>
       <Music
-        title="The World Turned Upside Down"
-        artist="Billy Bragg"
-        runtime="2:36 mins"
+        title={t("friedrich.musicTitle")}
+        artist={t("friedrich.musicArtist")}
+        runtime={t("friedrich.musicRuntime")}
         image="/music/friedrich-engels.jpg"
         href={typeof musicHref === "string" ? musicHref : "#"}
       />
       <Media images={images} />
       <Links links={links} />
-      <Questions questions={questions} location="Friedrich Engels" /> 
-      <Venues venues={venues}/>
+      <Questions questions={questions} location={t("friedrich.locationName")} />
+      <Venues venues={venues} />
       <Attributions attributions={attributions} />
       <Divider />
     </>

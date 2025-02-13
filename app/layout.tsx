@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import ClientI18nProvider from "./ClientI18nProvider";
 import "../styles/globals.css";
 
 const cardo = localFont({
@@ -35,7 +36,9 @@ export default function RootLayout({
       <body
         className={`${cardo.variable} ${cardoItalic.variable} ${cardoBold.variable} antialiased`}
       >
-        {children}
+        <ClientI18nProvider>
+          {children}
+        </ClientI18nProvider>
       </body>
     </html>
   );

@@ -1,4 +1,8 @@
+"use client";
+
+import React from "react";
 import MusicProvider from "@/components/MusicProvider";
+import StopProps from "@/components/ui/stops/StopProps";
 import Button from "../Button";
 import Divider from "../Divider";
 import Music from "../Music";
@@ -6,13 +10,16 @@ import Media, { MediaItemProps } from "../Media";
 import Links, { LinkProps } from "../Links";
 import Questions, { QuestionProps } from "../Questions";
 import Venues, { VenueProps } from "../Venues";
+import { useTranslation } from "next-i18next";
 
-const NorthernQuarter: React.FC = () => {
-  const musicHref = MusicProvider({ songKey: "Northern Quarter", index: 0 });
+const NorthernQuarter: React.FC<StopProps> = ({ musicIndex }) => {
+  const { t } = useTranslation("common");
+  const musicHref = MusicProvider({ songKey: "Northern Quarter", index: musicIndex });
+
   const images: MediaItemProps[] = [
     {
       href: "/dale-house.jpg",
-      caption: "Dale House, Dale Street",
+      caption: t("northernQuarter.imageCaptionDaleHouse"),
       width: 623,
       height: 421,
       thumbnailWidth: 280,
@@ -20,68 +27,107 @@ const NorthernQuarter: React.FC = () => {
     },
     {
       href: "/smithfield.jpg",
-      caption: "Smithfield Market, Northern Quarter, 1907",
+      caption: t("northernQuarter.imageCaptionSmithfield"),
       width: 816,
       height: 642,
       thumbnailWidth: 240,
       thumbnailHeight: 187,
     },
   ];
+
   const links: LinkProps[] = [
     {
       url: "https://historicengland.org.uk/images-books/publications/manchesters-northern-quarter/manchesters-northern-quarter/",
-      caption: "Historic England: Manchester's Northern Quarter (pdf)",
+      caption: t("northernQuarter.linkHistoricEngland"),
     },
     {
       url: "https://en.wikipedia.org/wiki/Northern_Quarter_(Manchester)",
-      caption: "Wikipedia: Northern Quarter (Manchester)"
-    }
+      caption: t("northernQuarter.linkWikipedia"),
+    },
   ];
-  const questions: QuestionProps[] = [    
+
+  const questions: QuestionProps[] = [
     {
-      text: "Is it true that Stevenson Square was originally planned to be a middle-class park with gardens?",
+      text: t("northernQuarter.questionStevensonSquare"),
     },
     {
-      text: "What role does the Northern Quarter play in addressing issues like gentrification and the displacement of working-class communities in Manchester?",
+      text: t("northernQuarter.questionGentrification"),
     },
     {
-      text: "How does the history of Affleck’s reflect the shift from Manchester’s industrial past to its creative present?",
+      text: t("northernQuarter.questionAfflecksHistory"),
     },
     {
-      text: "When did the Northern Quarter start to decline from its peak as an industrial hub?",
+      text: t("northernQuarter.questionDeclineTiming"),
     },
     {
-      text: "How has the Northern Quarter maintained its identity as a place for activism and creativity while undergoing commercial development?",
-    }
+      text: t("northernQuarter.questionIdentityPreservation"),
+    },
   ];
-  
+
   const venues: VenueProps[] = [
-    { title: "7Sins, Northern Quarter", imgSrc: "/venues/7sins.jpg", href: "https://www.7sins.co.uk/" },
-    { title: "English Lounge NQ", imgSrc: "/venues/english-lounge.jpg", href: "https://www.craftunionpubs.com/english-lounge-manchester" },
-    { title: "Lost Cat", imgSrc: "/venues/lost-cat.jpg", href: "https://lostcatnq.co.uk/" },
-    { title: "Junior Jackon's", imgSrc: "/venues/junior-jacksons.jpg", href: "https://bunnyjacksons.co.uk/" },
-    { title: "Tib Street Tavern", imgSrc: "/venues/tib-street.jpg", href: "https://www.tibstreettavern.co.uk/" },
-    { title: "Unicorn Manchester", imgSrc: "/venues/unicorn.jpg", href: "https://www.craftunionpubs.com/unicorn-manchester" },
-  ]
-  
+    {
+      title: t("northernQuarter.venue7Sins"),
+      imgSrc: "/venues/7sins.jpg",
+      href: "https://www.7sins.co.uk/",
+    },
+    {
+      title: t("northernQuarter.venueEnglishLounge"),
+      imgSrc: "/venues/english-lounge.jpg",
+      href: "https://www.craftunionpubs.com/english-lounge-manchester",
+    },
+    {
+      title: t("northernQuarter.venueLostCat"),
+      imgSrc: "/venues/lost-cat.jpg",
+      href: "https://lostcatnq.co.uk/",
+    },
+    {
+      title: t("northernQuarter.venueJuniorJacksons"),
+      imgSrc: "/venues/junior-jacksons.jpg",
+      href: "https://bunnyjacksons.co.uk/",
+    },
+    {
+      title: t("northernQuarter.venueTibStreetTavern"),
+      imgSrc: "/venues/tib-street.jpg",
+      href: "https://www.tibstreettavern.co.uk/",
+    },
+    {
+      title: t("northernQuarter.venueUnicornManchester"),
+      imgSrc: "/venues/unicorn.jpg",
+      href: "https://www.craftunionpubs.com/unicorn-manchester",
+    },
+  ];
+
   return (
-    <>      
+    <>
       <div className="text-left text-xl mt-4">
-        <Button label="View on map" href="https://maps.app.goo.gl/v4mwD9izrU62AmK47?g_st=com.google.maps.preview.copy" />
-        <p className="mt-4">Go to the <a className="underline" href="https://maps.app.goo.gl/v4mwD9izrU62AmK47?g_st=com.google.maps.preview.copy">Dale House in the Northern Quarter</a>, play the music below and when you’re near say to the AI &ldquo;I’m arriving at the Northern Quarter&rdquo;</p>
+        <Button
+          label={t("northernQuarter.viewOnMap")}
+          href="https://maps.app.goo.gl/v4mwD9izrU62AmK47?g_st=com.google.maps.preview.copy"
+        />
+        <p className="mt-4">
+          {t("northernQuarter.instructionsPrefix")}{" "}
+          <a
+            className="underline"
+            href="https://maps.app.goo.gl/v4mwD9izrU62AmK47?g_st=com.google.maps.preview.copy"
+          >
+            {t("northernQuarter.daleHouseLinkText")}
+          </a>, {t("northernQuarter.instructionsSuffix")}
+        </p>
       </div>
       <Music
-        title="Captain Ward"
-        artist="Spiers & Boden"
-        runtime="4:13 mins"
+        title={t("northernQuarter.musicTitle")}
+        artist={t("northernQuarter.musicArtist")}
+        runtime={t("northernQuarter.musicRuntime")}
         image="/music/northern-quarter.jpg"
         href={typeof musicHref === "string" ? musicHref : "#"}
       />
       <Media images={images} />
       <Links links={links} />
-      <Questions questions={questions} location="the Northern Quarter" />      
-      <Venues venues={venues}/>
-      
+      <Questions
+        questions={questions}
+        location={t("northernQuarter.locationName")}
+      />
+      <Venues venues={venues} />
       <Divider />
     </>
   );
