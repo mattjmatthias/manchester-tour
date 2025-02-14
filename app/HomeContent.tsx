@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import TourStop from "@/components/ui/TourStop";
 import Castlefield from "@/components/ui/stops/Castlefield";
@@ -42,7 +42,6 @@ function getInitialValues() {
 export default function HomeContent() {
   const { t, i18n } = useTranslation("common");
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   // Ensure we render only on the client
   const [isMounted, setIsMounted] = useState(false);
@@ -52,8 +51,8 @@ export default function HomeContent() {
 
   // Get initial values synchronously (only works on client)
   const { music: initialMusic, language: initialLanguage } = getInitialValues();
-  const [music, setMusic] = useState<number>(initialMusic);
-  const [language, setLanguage] = useState<string>(initialLanguage);
+  const [music] = useState<number>(initialMusic);
+  const [language] = useState<string>(initialLanguage);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const tourStopRefs = useRef<(HTMLDivElement | null)[]>([]);
 
