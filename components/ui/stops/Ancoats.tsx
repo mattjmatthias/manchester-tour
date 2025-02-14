@@ -144,7 +144,7 @@ const Ancoats: React.FC<StopProps> = ({ musicIndex }) => {
     <>
       <div className="text-left text-xl mt-4">
         <Button
-          label={t("ancoats.viewOnMap")}
+          label={t("viewOnMap")}
           href="https://maps.app.goo.gl/sev2T3htxvHW8JQM6?g_st=com.google.maps.preview.copy"
         />
         <p className="mt-4">

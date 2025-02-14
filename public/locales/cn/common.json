@@ -22,7 +22,6 @@
   "goodbyeSubtitle": "以及最后一首歌",
   "privacy": "隐私政策",
   "support": "支持",
-  "by": "由 Matt Matthias",
   "back": "< 返回",
   "pageTitle": "开始之前",
   "pageSubtitle": "所需物品说明",
@@ -37,9 +36,9 @@
   "downloadGooglePlayAlt": "通过Google Play下载",
   "openaiSupportText": "您可以在OpenAI支持页面了解更多如何在应用中通过语音与AI交流的信息。",
   "musicSetupTitle": "2. 音乐设置",
-  "musicSetupText": "为了使您的游览更加丰富，我们提供Spotify或苹果音乐账号的链接。如果您不使用这两种服务，我们还提供通过YouTube的音乐链接，不过免费账号可能会有广告。",
+  "musicSetupText": "为了使您的游览更加丰富，我们提供Spotify或Apple Music账号的链接。如果您不使用这两种服务，我们还提供通过YouTube的音乐链接，不过免费账号可能会有广告。",
   "musicOptionSpotify": "Spotify",
-  "musicOptionApple": "苹果音乐",
+  "musicOptionApple": "Apple Music",
   "musicOptionYouTube": "YouTube",
   "languageSetupTitle": "切换语言",
   "languageOptionEnglish": "英语",
@@ -47,11 +46,22 @@
   "languageOptionSpanish": "西班牙语",
   "languageOptionGerman": "德语",
   "languageOptionItalian": "意大利语",
+  "languageOptionChinese": "简体中文",
+  "languageOptionJapanese": "日本語",
   "readyText": "准备开始了吗？",
   "openAiLabel": "在ChatGPT中启动AI",
   "footerText": "Google Play及其标志为Google LLC的商标，“在App Store下载”为Apple Inc.的商标。",
+  "viewOnMap": "在地图上查看",
+  "linksHeader": "链接",
+  "media": "媒体",
+  "music": "音乐",
+  "questions": "向 AI 询问有关",
+  "questions2": "的问题",
+  "places": "就餐或饮品场所",
+  "by": "由",
+  "attributionsHeader": "鸣谢与署名",
+  "saveChanges": "保存更改",
   "ancoats": {
-    "viewOnMap": "在地图上查看",
     "introTextBeforeMap": "前往",
     "cuttingRoomSquare": "Cutting Room Square",
     "introTextAfterMap": "位于安科茨，到达后播放下方音乐，并告诉AI“我已到达安科茨”",
@@ -83,7 +93,6 @@
     "locationName": "安科茨"
   },
   "castlefield": {
-    "viewOnMap": "在地图上查看",
     "instructionsPrefix": "前往",
     "visitorsCentre": "卡斯尔菲尔德高架桥游客中心",
     "instructionsSuffix": "播放下方歌曲，到达后告诉AI“我已到达卡斯尔菲尔德”",
@@ -112,7 +121,6 @@
     "locationName": "卡斯尔菲尔德"
   },
   "emmeline": {
-    "viewOnMap": "在地图上查看",
     "mapInstructionsPrefix": "前往",
     "statueName": "埃米琳·潘克赫斯特雕像",
     "mapInstructionsSuffix": "播放下方歌曲，到达后告诉AI“我已到达埃米琳·潘克赫斯特雕像”",
@@ -121,7 +129,7 @@
     "musicRuntime": "3:15 分钟",
     "imageCaption1913": "1913年的埃米琳·潘克赫斯特",
     "imageCaptionDavisonFuneral": "1913年，Emily Davison葬礼队伍的一部分",
-    "imageCaptionPrison": "1911年，囚中的埃米琳·潘克赫斯特",
+    "imageCaptionPrison": "1911年的囚中埃米琳·潘克赫斯特",
     "linkPankhurstCentre": "曼彻斯特潘克赫斯特中心",
     "linkNationalArchives": "国家档案馆：埃米琳·潘克赫斯特",
     "linkYouTubeSpeech": "YouTube：埃米琳·潘克赫斯特｜‘我号召这次集会进行反抗’演讲，1912年10月｜女性选举权",
@@ -140,11 +148,10 @@
     "attributionCCBYSA": "CC BY-SA 2.0许可证",
     "attributionGranted": "提供者",
     "attributionAdamCuerden": "Adam Cuerden",
-    "attributionUnknownAuthor": "作者不详——《The Suffragette》，1970年，由Sturgis & Walton Company（纽约）于1911年首次出版，第330页",
+    "attributionUnknownAuthor": "作者不明 ― 『The Suffragette』、1970年、Source Book Press。初版：Sturgis & Walton Company（纽约）、1911年、330页",
     "locationName": "埃米琳·潘克赫斯特"
   },
   "friedrich": {
-    "viewOnMap": "在地图上查看",
     "instructionsPrefix": "前往",
     "statueName": "弗里德里希·恩格尔斯雕像",
     "instructionsSuffix": "播放下方歌曲，到达后告诉AI“我已到达弗里德里希·恩格尔斯雕像”",
@@ -180,7 +187,6 @@
     "musicRuntime": "3:48 分钟"
   },
   "northernQuarter": {
-    "viewOnMap": "在地图上查看",
     "instructionsPrefix": "前往",
     "daleHouseLinkText": "北区的 Dale House",
     "instructionsSuffix": "播放下方音乐，到达后告诉AI“我已到达北区”",
@@ -205,7 +211,6 @@
     "locationName": "北区"
   },
   "stPetersField": {
-    "viewOnMap": "在地图上查看",
     "instructionsPrefix": "前往",
     "memorialLinkText": "彼得卢纪念碑",
     "instructionsSuffix": "播放下方音乐，到达后告诉AI“我已到达彼得卢纪念碑”",
@@ -222,7 +227,7 @@
     "questionGovernmentForce": "政府是如何为在彼得卢对和平抗议者使用武力辩护的？",
     "questionReformAchievement": "改革者何时实现了他们所期望的改革？",
     "questionMediaEyewitness": "媒体报道和目击者证词如何影响了彼得卢大屠杀后的局势？",
-    "questionLongTermConsequences": "彼得卢大屠杀对曼彻斯特及其政治格局产生了哪些长期影响？",
+    "questionLongTermConsequences": "彼得卢大屠杀对曼彻斯特及其政治情势产生了哪些长期影响？",
     "venueSociety": "Society",
     "venueTemple": "The Temple (Temple of Convenience)",
     "venueEzraGil": "Ezra & Gil - Peter Street",

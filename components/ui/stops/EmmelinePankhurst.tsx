@@ -122,7 +122,7 @@ const EmmelinePankhurst: React.FC<StopProps> = ({ musicIndex }) => {
   return (
     <>
       <div className="text-left text-xl mt-4">
-        <Button label={t("emmeline.viewOnMap")} href="https://maps.app.goo.gl/tXqp4aEkBQsZE1CK9?g_st=com.google.maps.preview.copy" />
+        <Button label={t("viewOnMap")} href="https://maps.app.goo.gl/tXqp4aEkBQsZE1CK9?g_st=com.google.maps.preview.copy" />
         <p className="mt-4">
           {t("emmeline.mapInstructionsPrefix")}{" "}
           <a

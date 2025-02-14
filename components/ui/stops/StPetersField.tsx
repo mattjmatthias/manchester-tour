@@ -140,7 +140,7 @@ const StPetersField: React.FC<StopProps> = ({ musicIndex }) => {
     <>
       <div className="text-left text-xl mt-4">
         <Button
-          label={t("stPetersField.viewOnMap")}
+          label={t("viewOnMap")}
           href="https://maps.app.goo.gl/iGH5kYa1q4h7BAiCA?g_st=com.google.maps.preview.copy"
         />
         <p className="mt-4">

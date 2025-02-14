@@ -21,8 +21,7 @@
   "goodbyeTitle": "La fine",
   "goodbyeSubtitle": "E un'ultima canzone",
   "privacy": "Politica sulla privacy",
-  "support": "Assistenza",
-  "by": "di Matt Matthias",
+  "support": "Assistenza",  
   "back": "< Indietro",
   "pageTitle": "Prima di iniziare",
   "pageSubtitle": "Istruzioni su ciò di cui hai bisogno",
@@ -52,8 +51,16 @@
   "readyText": "Pronto per iniziare?",
   "openAiLabel": "Apri l'IA in ChatGPT",
   "footerText": "Google Play e il logo di Google Play sono marchi di Google LLC. 'Scarica da App Store' è un marchio di Apple Inc.",
+  "viewOnMap": "Visualizza sulla mappa",
+  "linksHeader": "Collegamenti",
+  "media": "Media",
+  "music": "Musica",
+  "questions": "Domande da porre all'IA su",
+  "places": "Luoghi dove mangiare o bere",
+  "by": "di",
+  "attributionsHeader": "Crediti e attribuzioni",
+  "saveChanges": "Salva modifiche",
   "ancoats": {
-    "viewOnMap": "Visualizza sulla mappa",
     "introTextBeforeMap": "Vai a",
     "cuttingRoomSquare": "Cutting Room Square",
     "introTextAfterMap": "ad Ancoats, riproduci la musica sottostante e, quando sarai nei paraggi, dì all'IA 'Sono arrivato ad Ancoats'",
@@ -85,7 +92,6 @@
     "locationName": "Ancoats"
   },
   "castlefield": {
-    "viewOnMap": "Visualizza sulla mappa",
     "instructionsPrefix": "Dirigiti verso",
     "visitorsCentre": "il Centro Visitatori del Viadotto di Castlefield",
     "instructionsSuffix": "riproduci la canzone sottostante e, quando sarai nei paraggi, dì all'IA 'Sono arrivato a Castlefield'",
@@ -114,7 +120,6 @@
     "locationName": "Castlefield"
   },
   "emmeline": {
-    "viewOnMap": "Visualizza sulla mappa",
     "mapInstructionsPrefix": "Dirigiti verso",
     "statueName": "Statua di Emmeline Pankhurst",
     "mapInstructionsSuffix": "riproduci la canzone sottostante e, quando sarai vicino, dì all'IA 'Sto arrivando alla Statua di Emmeline Pankhurst'",
@@ -146,7 +151,6 @@
     "locationName": "Emmeline Pankhurst"
   },
   "friedrich": {
-    "viewOnMap": "Visualizza sulla mappa",
     "instructionsPrefix": "Dirigiti verso",
     "statueName": "Statua di Friedrich Engels",
     "instructionsSuffix": "riproduci la canzone sottostante e, una volta arrivato, dì all'IA 'Sto arrivando alla Statua di Friedrich Engels'",
@@ -182,7 +186,6 @@
     "musicRuntime": "3:48 min"
   },
   "northernQuarter": {
-    "viewOnMap": "Visualizza sulla mappa",
     "instructionsPrefix": "Dirigiti verso",
     "daleHouseLinkText": "Dale House nel Northern Quarter",
     "instructionsSuffix": "riproduci la canzone sottostante e, una volta arrivato, dì all'IA 'Sto arrivando al Northern Quarter'",
@@ -207,7 +210,6 @@
     "locationName": "il Northern Quarter"
   },
   "stPetersField": {
-    "viewOnMap": "Visualizza sulla mappa",
     "instructionsPrefix": "Dirigiti verso",
     "memorialLinkText": "il Memoriale di Peterloo",
     "instructionsSuffix": "riproduci la canzone sottostante e, una volta arrivato, dì all'IA 'Sto arrivando al Memoriale di Peterloo'",

@@ -104,7 +104,7 @@ const Castlefield: React.FC<StopProps> = ({ musicIndex }) => {
   return (
     <>
       <div className="text-left text-xl mt-4">
-        <Button label={t("castlefield.viewOnMap")} href="https://maps.app.goo.gl/KE1GrChFpa9WJU24A?g_st=ic" />
+        <Button label={t("viewOnMap")} href="https://maps.app.goo.gl/KE1GrChFpa9WJU24A?g_st=ic" />
         <p className="mt-4">
           {t("castlefield.instructionsPrefix")}{" "}
           <a href="https://maps.app.goo.gl/KE1GrChFpa9WJU24A?g_st=ic" className="underline">

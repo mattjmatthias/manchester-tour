@@ -22,7 +22,6 @@
     "goodbyeSubtitle": "And 1 Last Song",
     "privacy": "Privacy Policy",
     "support": "Support",
-    "by": "by Matt Matthias",
     "back": "< Back",
     "pageTitle": "Before you start",
     "pageSubtitle": "Instructions for what you need",
@@ -52,8 +51,16 @@
     "readyText": "Ready to get started?",
     "openAiLabel": "Open the AI in ChatGPT",
     "footerText": "Google Play and the Google Play logo are trademarks of Google LLC. “Download on the App Store” is a trademark of Apple Inc.",
+    "viewOnMap": "View on map",
+    "attributionsHeader": "Credits & Attributions",
+    "linksHeader": "Links",
+    "media": "Media",
+    "music": "Music",
+    "questions": "Questions to ask the AI about",
+    "places": "Places to Eat or Drink",
+    "saveChanges": "Save changes",
+    "by": "by",
     "ancoats": {
-      "viewOnMap": "View on map",
       "introTextBeforeMap": "Go to the",
       "cuttingRoomSquare": "Cutting Room Square",
       "introTextAfterMap": "in Ancoats, play the music below and when you’re near say to the AI “I’m arriving at Ancoats”",
@@ -85,7 +92,6 @@
       "locationName": "Ancoats"
     },
     "castlefield": {
-      "viewOnMap": "View on map",
       "instructionsPrefix": "Head for",
       "visitorsCentre": "Castlefield Viaduct Visitors Centre",
       "instructionsSuffix": "play the song below and when you’re near say to the AI “I’m arriving at Castlefield”",
@@ -114,7 +120,6 @@
       "locationName": "Castlefield"
     },
     "emmeline": {
-      "viewOnMap": "View on map",
       "mapInstructionsPrefix": "Go to the",
       "statueName": "Emmeline Pankhurst Statue",
       "mapInstructionsSuffix": "play the music below and when you’re near say to the AI “I’m arriving at the Emmeline Pankhurst Statue”",
@@ -146,7 +151,6 @@
       "locationName": "Emmeline Pankhurst"
     },
     "friedrich": {
-      "viewOnMap": "View on map",
       "instructionsPrefix": "Go to the",
       "statueName": "Friedrich Statue",
       "instructionsSuffix": "play the song below and when you’re near say to the AI “I’m arriving at the Friedrich Engels statue”",
@@ -182,7 +186,6 @@
       "musicRuntime": "3:48 mins"
     },
     "northernQuarter": {
-      "viewOnMap": "View on map",
       "instructionsPrefix": "Go to the",
       "daleHouseLinkText": "Dale House in the Northern Quarter",
       "instructionsSuffix": "play the music below and when you’re near say to the AI “I’m arriving at the Northern Quarter”",
@@ -207,7 +210,6 @@
       "locationName": "the Northern Quarter"
     },
     "stPetersField": {
-      "viewOnMap": "View on map",
       "instructionsPrefix": "Go to the",
       "memorialLinkText": "Peterloo Memorial",
       "instructionsSuffix": "play the music below and when you’re near say to the AI “I’m arriving at the Peterloo Memorial”",

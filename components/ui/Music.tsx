@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 type MusicProps = {
   title: string;
@@ -16,9 +17,11 @@ const Music: React.FC<MusicProps> = ({
   image,
   href,
 }) => {
+  const { t } = useTranslation("common");
+
   return (
     <>
-      <h2 className="text-xl mt-8 mb-4">Music</h2>
+      <h2 className="text-xl mt-8 mb-4">{t("music")}</h2>
       <Link
         href={href}
         className="flex items-center p-2 hover:bg-gray-200 w-fit"
@@ -26,7 +29,7 @@ const Music: React.FC<MusicProps> = ({
         <div className="flex items-center">
           <Image
             src={image}
-            alt={`${title} by ${artist}`}
+            alt={`${title} ${t("by")} ${artist}`}
             width={100}
             height={100}
             className="mr-4"

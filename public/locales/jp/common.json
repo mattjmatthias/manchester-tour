@@ -22,7 +22,6 @@
   "goodbyeSubtitle": "そして最後の一曲",
   "privacy": "プライバシーポリシー",
   "support": "サポート",
-  "by": "Matt Matthiasによる",
   "back": "< 戻る",
   "pageTitle": "始める前に",
   "pageSubtitle": "必要なものの説明",
@@ -47,11 +46,21 @@
   "languageOptionSpanish": "スペイン語",
   "languageOptionGerman": "ドイツ語",
   "languageOptionItalian": "イタリア語",
+  "languageOptionChinese": "中国語",
+  "languageOptionJapanese": "日本語",
   "readyText": "さあ、始める準備はできましたか？",
   "openAiLabel": "ChatGPTでAIを起動",
   "footerText": "Google PlayとGoogle PlayのロゴはGoogle LLCの商標です。「App Storeでダウンロード」はApple Inc.の商標です。",
+  "viewOnMap": "地図で見る",
+  "linksHeader": "リンク",
+  "media": "メディア",
+  "music": "音楽",
+  "questions": "に関するAIへの質問",
+  "places": "食事や飲み物を楽しむ場所",
+  "by": "Matt Matthiasによる",
+  "attributionsHeader": "クレジットと謝辞",
+  "saveChanges": "変更を保存",
   "ancoats": {
-    "viewOnMap": "地図で見る",
     "introTextBeforeMap": "次に向かってください",
     "cuttingRoomSquare": "カッティングルーム・スクエア",
     "introTextAfterMap": "アンコーツに到着したら、下記の音楽を再生し、AIに「アンコーツに着いた」と伝えてください",
@@ -83,7 +92,6 @@
     "locationName": "アンコーツ"
   },
   "castlefield": {
-    "viewOnMap": "地図で見る",
     "instructionsPrefix": "向かってください",
     "visitorsCentre": "キャッスルフィールド・ヴィアダクト・ビジターセンター",
     "instructionsSuffix": "下記の曲を再生し、到着したらAIに「キャッスルフィールドに着いた」と伝えてください",
@@ -112,7 +120,6 @@
     "locationName": "キャッスルフィールド"
   },
   "emmeline": {
-    "viewOnMap": "地図で見る",
     "mapInstructionsPrefix": "向かってください",
     "statueName": "エメリーン・パンカースト像",
     "mapInstructionsSuffix": "下記の曲を再生し、到着したらAIに「エメリーン・パンカースト像に着いた」と伝えてください",
@@ -144,7 +151,6 @@
     "locationName": "エメリーン・パンカースト"
   },
   "friedrich": {
-    "viewOnMap": "地図で見る",
     "instructionsPrefix": "向かってください",
     "statueName": "フリードリヒ・エンゲルス像",
     "instructionsSuffix": "下記の曲を再生し、到着したらAIに「フリードリヒ・エンゲルス像に着いた」と伝えてください",
@@ -176,11 +182,10 @@
   "goodbye": {
     "text": "このツアーをお楽しみいただき、マンチェスターとその歴史について新たな発見があったことを願っています。私たちは、マンチェスターの闘志と、正義のための戦いを象徴する最後の一曲をお届けしたいと思います。",
     "musicTitle": "Song of Choice",
-    "musicArtist": "Peggy Seeger and Ewan MacColl",
+    "musicArtist": "Peggy Seeger と Ewan MacColl",
     "musicRuntime": "3:48分"
   },
   "northernQuarter": {
-    "viewOnMap": "地図で見る",
     "instructionsPrefix": "向かってください",
     "daleHouseLinkText": "ノーザンクォーターのDale House",
     "instructionsSuffix": "下記の音楽を再生し、到着したらAIに「ノーザンクォーターに着いた」と伝えてください",
@@ -205,7 +210,6 @@
     "locationName": "ノーザンクォーター"
   },
   "stPetersField": {
-    "viewOnMap": "地図で見る",
     "instructionsPrefix": "向かってください",
     "memorialLinkText": "ピータールー記念碑",
     "instructionsSuffix": "下記の音楽を再生し、到着したらAIに「ピータールー記念碑に着いた」と伝えてください",

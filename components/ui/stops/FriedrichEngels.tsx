@@ -92,7 +92,7 @@ const FriedrichEngels: React.FC<StopProps> = ({ musicIndex }) => {
     <>
       <div className="text-left text-xl mt-4">
         <Button
-          label={t("friedrich.viewOnMap")}
+          label={t("viewOnMap")}
           href="https://maps.app.goo.gl/deNTGd9yYp1pPPy87?g_st=com.google.maps.preview.copy"
         />
         <p className="mt-4">

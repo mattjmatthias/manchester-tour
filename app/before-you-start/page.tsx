@@ -6,6 +6,7 @@ import Divider from "@/components/ui/Divider";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { useTranslation } from "next-i18next";
+import i18n from "../../i18n";
 
 export default function BeforeYouStart() {
   const { t } = useTranslation("common");
@@ -18,6 +19,7 @@ export default function BeforeYouStart() {
     let updated = false;
     const query = new URLSearchParams(window.location.search);
 
+    // Handle music parameter
     let newMusic: number;
     const mParam = query.get("m");
     if (
@@ -36,8 +38,10 @@ export default function BeforeYouStart() {
     setMusicServer(newMusic);
     localStorage.setItem("music", newMusic.toString());
 
+    // Handle language parameter
+    const supportedLanguages = ["en", "fr", "cn", "jp", "es", "de", "it"];
     let currentLanguage = query.get("l");
-    if (!currentLanguage || !["en", "fr", "cn", "jp", "es", "de", "it"].includes(currentLanguage)) {
+    if (!currentLanguage || !supportedLanguages.includes(currentLanguage)) {
       currentLanguage = localStorage.getItem("language") || "en";
       query.set("l", currentLanguage);
       updated = true;
@@ -50,36 +54,59 @@ export default function BeforeYouStart() {
     }
   }, [router]);
 
+  // Ensure i18n uses the query string language
+  useEffect(() => {
+    const query = new URLSearchParams(window.location.search);
+    const langFromQuery = query.get("l");
+    if (langFromQuery && langFromQuery !== i18n.language) {
+      i18n.changeLanguage(langFromQuery);
+    }
+  }, []);
+
+  // Update state without immediate reload
   const handleMusicChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newMusic = parseInt(e.target.value, 10);
     setMusicServer(newMusic);
-    localStorage.setItem("music", newMusic.toString());
-    const query = new URLSearchParams(window.location.search);
-    query.set("m", newMusic.toString());
-    router.replace(`?${query.toString()}`);
   };
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLanguage = e.target.value;
     setLanguage(newLanguage);
-    localStorage.setItem("language", newLanguage);
+  };
+
+  // Save Changes button updates both language and music query parameters, then reloads the page.
+  const handleSaveChanges = () => {
     const query = new URLSearchParams(window.location.search);
-    query.set("l", newLanguage);
-    router.replace(`?${query.toString()}`);
+
+    localStorage.setItem("language", language);
+    localStorage.setItem("music", musicServer.toString());
+    query.set("l", language);
+    query.set("m", musicServer.toString());
+    
+    i18n.changeLanguage(language).then(() => {
+      window.location.href = `./?${query.toString()}`;
+    });
   };
 
   return (
     <div>
       <div className="flex flex-col md:p-16 p-8 h-full w-full">
-        {/* Container for content and buttons */}
-        <div className="md:flex w-full md:justify-between">
-          {/* Left section with text */}
+        {/* Top buttons: Back and Save Changes */}
+        <div className="md:flex w-fit gap-x-2 items-center">
           <div className="text-left">
             <Button className="text-xl" href="/" label={t("back")} />
-            <h1 className="text-4xl mt-8">{t("pageTitle")}</h1>
-            <h2 className="md:text-md text-md uppercase">{t("pageSubtitle")}</h2>
+          </div>
+          <div>
+            <Button
+              className="text-xl"
+              onClick={handleSaveChanges}
+              label={t("saveChanges", "Save Changes")}
+            />
           </div>
         </div>
+
+        <h1 className="text-4xl mt-8">{t("pageTitle")}</h1>
+        <h2 className="md:text-md text-md uppercase">{t("pageSubtitle")}</h2>
 
         <div className="text-lg mt-8">
           <p>{t("instructionsText")}</p>

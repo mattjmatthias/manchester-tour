@@ -1,4 +1,3 @@
-// app/HomeContent.tsx
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
@@ -15,58 +14,63 @@ import Link from "next/link";
 import Goodbye from "@/components/ui/stops/Goodbye";
 import { useTranslation } from "next-i18next";
 
-export default function HomeContent() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const tourStopRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [music, setMusic] = useState<number>(1);
-  const [language, setLanguage] = useState<string>("en");
-
-  useEffect(() => {
-    let updated = false;
+// Synchronously determine initial values on the client
+function getInitialValues() {
+  if (typeof window !== "undefined") {
     const query = new URLSearchParams(window.location.search);
-
-    // Handle music parameter (valid values: 0, 1, or 2)
-    let newMusic: number;
     const mParam = query.get("m");
+    let music = 1;
     if (mParam && !isNaN(parseInt(mParam, 10)) && parseInt(mParam, 10) >= 0 && parseInt(mParam, 10) <= 2) {
-      newMusic = parseInt(mParam, 10);
+      music = parseInt(mParam, 10);
     } else {
       const storedMusic = localStorage.getItem("music");
-      newMusic = storedMusic ? parseInt(storedMusic, 10) : 1;
-      query.set("m", newMusic.toString());
-      updated = true;
+      music = storedMusic ? parseInt(storedMusic, 10) : 1;
     }
-
-    // Handle language parameter
     const supportedLanguages = ["en", "fr", "de", "es", "it", "cn", "jp"];
-    let newLanguage: string;
+    let language = "en";
     const lParam = query.get("l");
     if (lParam && supportedLanguages.includes(lParam.toLowerCase())) {
-      newLanguage = lParam.toLowerCase();
+      language = lParam.toLowerCase();
     } else {
-      const storedLanguage = localStorage.getItem("language");
-      newLanguage = storedLanguage && supportedLanguages.includes(storedLanguage)
-        ? storedLanguage
-        : "en";
-      query.set("l", newLanguage);
-      updated = true;
+      language = localStorage.getItem("language") || "en";
     }
+    return { music, language };
+  }
+  return { music: 1, language: "en" };
+}
 
-    // Update state and localStorage
-    setMusic(newMusic);
-    setLanguage(newLanguage);
-    localStorage.setItem("music", newMusic.toString());
-    localStorage.setItem("language", newLanguage);
-
-    // If missing query params were added, update the URL
-    if (updated) {
-      router.replace(`?${query.toString()}`);
-    }
-  }, [searchParams, router]);
-
+export default function HomeContent() {
   const { t, i18n } = useTranslation("common");
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // Ensure we render only on the client
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Get initial values synchronously (only works on client)
+  const { music: initialMusic, language: initialLanguage } = getInitialValues();
+  const [music, setMusic] = useState<number>(initialMusic);
+  const [language, setLanguage] = useState<string>(initialLanguage);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const tourStopRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Sync URL and localStorage with state after mount
+  useEffect(() => {
+    if (!isMounted) return;
+    const query = new URLSearchParams(window.location.search);
+    if (query.get("m") !== music.toString()) {
+      query.set("m", music.toString());
+    }
+    if (query.get("l") !== language) {
+      query.set("l", language);
+    }
+    router.replace(`?${query.toString()}`);
+    localStorage.setItem("music", music.toString());
+    localStorage.setItem("language", language);
+  }, [music, language, router, isMounted]);
 
   useEffect(() => {
     if (language && i18n.language !== language) {
@@ -130,6 +134,11 @@ export default function HomeContent() {
     }
   }, [activeIndex]);
 
+  // Prevent rendering until mounted to avoid flashing default values
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <div>
       <div className="flex flex-col md:p-16 p-8 h-full w-full">
@@ -185,7 +194,7 @@ export default function HomeContent() {
           {t("support")}
         </Link>
         <Link href="https://www.mattjmatthias.co" className="mr-8">
-          {t("by")}
+          {t("by")} Matt Matthias
         </Link>
       </footer>
     </div>

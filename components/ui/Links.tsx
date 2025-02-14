@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 export type LinkProps = {
   url: string;
@@ -11,9 +12,13 @@ export type LinksProps = {
 };
 
 const Links: React.FC<LinksProps> = ({ links }) => {
+  const { t } = useTranslation("common");
+
   return (
     <>
-      <h2 className="text-xl mt-8 mb-4">Links</h2>
+      <h2 className="text-xl mt-8 mb-4">
+        {t("linksHeader", "Links")}
+      </h2>
 
       {links.map((link: LinkProps, i: number) => {
         return (
@@ -25,7 +30,7 @@ const Links: React.FC<LinksProps> = ({ links }) => {
             <div className="flex items-center w-full">
               <Image
                 src="/link.svg"
-                alt="Link icon"
+                alt={t("linkIconAlt", "Link icon")}
                 width={30}
                 height={30}
                 className="mr-4 flex-shrink-0"

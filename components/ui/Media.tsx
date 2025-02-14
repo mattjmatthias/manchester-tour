@@ -1,4 +1,5 @@
 import SimpleGallery from "@/components/SimpleGallery";
+import { useTranslation } from "next-i18next";
 
 export type MediaItemProps = {
   href: string;
@@ -14,9 +15,11 @@ export type MediaProps = {
 };
 
 const Media: React.FC<MediaProps> = ({ images }) => {
+  const { t } = useTranslation("common");
+
   return (
     <>
-      <h2 className="text-xl mt-8 mb-4">Media</h2>
+      <h2 className="text-xl mt-8 mb-4">{t("media")}</h2>
       <>
         <SimpleGallery
           galleryID="image-gallery"

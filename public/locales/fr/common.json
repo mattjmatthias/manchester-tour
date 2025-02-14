@@ -22,7 +22,6 @@
   "goodbyeSubtitle": "Et une dernière chanson",
   "privacy": "Politique de confidentialité",
   "support": "Assistance",
-  "by": "par Matt Matthias",
   "back": "< Retour",
   "pageTitle": "Avant de commencer",
   "pageSubtitle": "Instructions pour ce dont vous avez besoin",
@@ -52,8 +51,16 @@
   "readyText": "Prêt à commencer ?",
   "openAiLabel": "Ouvrir l'IA dans ChatGPT",
   "footerText": "Google Play et le logo Google Play sont des marques déposées de Google LLC. « Télécharger sur l'App Store » est une marque déposée d'Apple Inc.",
+  "viewOnMap": "Voir sur la carte",
+  "linksHeader": "Liens",
+  "media": "Médias",
+  "music": "Musique",
+  "questions": "Questions à poser à l'IA sur",
+  "places": "Lieux pour manger ou boire",
+  "by": "par",
+  "attributionsHeader": "Crédits et attributions",
+  "saveChanges": "Enregistrer les modifications",
   "ancoats": {
-    "viewOnMap": "Voir sur la carte",
     "introTextBeforeMap": "Allez à",
     "cuttingRoomSquare": "Cutting Room Square",
     "introTextAfterMap": "à Ancoats, lancez la musique ci-dessous et, une fois sur place, dites à l'IA « J'arrive à Ancoats »",
@@ -85,7 +92,6 @@
     "locationName": "Ancoats"
   },
   "castlefield": {
-    "viewOnMap": "Voir sur la carte",
     "instructionsPrefix": "Dirigez-vous vers",
     "visitorsCentre": "le Centre des visiteurs du viaduc de Castlefield",
     "instructionsSuffix": "jouez la chanson ci-dessous et, une fois sur place, dites à l'IA « J'arrive à Castlefield »",
@@ -114,7 +120,6 @@
     "locationName": "Castlefield"
   },
   "emmeline": {
-    "viewOnMap": "Voir sur la carte",
     "mapInstructionsPrefix": "Dirigez-vous vers",
     "statueName": "la statue d'Emmeline Pankhurst",
     "mapInstructionsSuffix": "jouez la chanson ci-dessous et, une fois sur place, dites à l'IA « J'arrive à la statue d'Emmeline Pankhurst »",
@@ -146,7 +151,6 @@
     "locationName": "Emmeline Pankhurst"
   },
   "friedrich": {
-    "viewOnMap": "Voir sur la carte",
     "instructionsPrefix": "Dirigez-vous vers",
     "statueName": "la statue de Friedrich Engels",
     "instructionsSuffix": "jouez la chanson ci-dessous et, une fois sur place, dites à l'IA « J'arrive à la statue de Friedrich Engels »",
@@ -178,11 +182,10 @@
   "goodbye": {
     "text": "Nous espérons que vous avez apprécié cette visite et appris quelque chose de nouveau sur Manchester et son histoire. Nous aimerions vous laisser avec une dernière chanson, celle qui, selon nous, capture l'esprit combatif de Manchester et la lutte pour ce qui est juste et équitable.",
     "musicTitle": "Song of Choice",
-    "musicArtist": "Peggy Seeger and Ewan MacColl",
+    "musicArtist": "Peggy Seeger et Ewan MacColl",
     "musicRuntime": "3:48 mins"
   },
   "northernQuarter": {
-    "viewOnMap": "Voir sur la carte",
     "instructionsPrefix": "Dirigez-vous vers",
     "daleHouseLinkText": "Dale House dans le Northern Quarter",
     "instructionsSuffix": "jouez la musique ci-dessous et, une fois sur place, dites à l'IA « J'arrive dans le Northern Quarter »",
@@ -207,7 +210,6 @@
     "locationName": "le Northern Quarter"
   },
   "stPetersField": {
-    "viewOnMap": "Voir sur la carte",
     "instructionsPrefix": "Dirigez-vous vers",
     "memorialLinkText": "le mémorial de Peterloo",
     "instructionsSuffix": "jouez la musique ci-dessous et, une fois sur place, dites à l'IA « J'arrive au mémorial de Peterloo »",
