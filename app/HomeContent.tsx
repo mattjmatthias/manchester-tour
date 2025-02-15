@@ -192,8 +192,8 @@ export default function HomeContent() {
         <Link href="/before-you-start" className="mr-8">
           {t("support")}
         </Link>
-        <Link href="https://www.mattjmatthias.co" className="mr-8">
-          {t("by")} Matt Matthias
+        <Link href="https://www.mattjmatthias.co" className="mr-8 whitespace-nowrap">
+          {t("by")} {i18n.language !== 'jp' ? "Matt Matthias" : ""}
         </Link>
       </footer>
     </div>

@@ -61,6 +61,23 @@
   "by": "由",
   "attributionsHeader": "鸣谢与署名",
   "saveChanges": "保存更改",
+
+  "privacyPageTitle": "隐私政策",
+  "privacyPageSubtitle": "隐私至关重要",
+  "privacyIntro": "本隐私政策概述了信息的处理和保护方式。",
+  "privacySectionChatGPTTitle": "1. ChatGPT 对话",
+  "privacySectionChatGPTText": "ChatGPT 对话仅在您与 OpenAI 之间保密，本网站无法访问这些对话。",
+  "privacySectionAnalyticsTitle": "2. Google Analytics",
+  "privacySectionAnalyticsText": "我们使用 Google Analytics 来监控服务的使用情况及受欢迎程度。这些数据有助于了解用户参与度并改善服务。仅收集匿名数据，不跟踪个人信息。",
+  "privacySectionFreeServiceTitle": "3. 免费且无广告的服务",
+  "privacySectionFreeServiceText": "该服务完全免费，且不含任何广告。这并非魔法，我们只是精心设计了服务，使其能够使用免费托管服务，因为我们认为不应一切都围绕赚钱展开。",
+  "privacySectionOpenAIDataTitle": "4. OpenAI 数据使用",
+  "privacySectionOpenAIDataText": "除非您选择退出，否则 OpenAI 可能会使用对话数据来提升和改进其模型。有关详细信息，请参阅 OpenAI 的隐私政策。",
+  "openaiLink": "OpenAI的隐私政策",
+  "privacySectionContactTitle": "5. 联系方式",
+  "privacySectionContactText": "如有任何与隐私相关的问题，请发送邮件至 ",
+  "privacyClosing": "感谢您试用本服务 💛",
+
   "ancoats": {
     "introTextBeforeMap": "前往",
     "cuttingRoomSquare": "Cutting Room Square",

@@ -61,6 +61,23 @@
   "by": "von",
   "saveChanges": "Änderungen speichern",
   "viewOnMap": "Auf der Karte anzeigen",
+
+  "privacyPageTitle": "Datenschutzerklärung",
+  "privacyPageSubtitle": "Datenschutz ist wichtig",
+  "privacyIntro": "Diese Datenschutzerklärung erläutert, wie Informationen verarbeitet und geschützt werden.",
+  "privacySectionChatGPTTitle": "1. ChatGPT-Konversationen",
+  "privacySectionChatGPTText": "ChatGPT-Konversationen bleiben privat zwischen Ihnen und OpenAI und sind für diese Website nicht zugänglich.",
+  "privacySectionAnalyticsTitle": "2. Google Analytics",
+  "privacySectionAnalyticsText": "Google Analytics wird verwendet, um die Nutzung und Beliebtheit des Dienstes zu überwachen. Diese Daten helfen, das Engagement der Nutzer zu verstehen und den Dienst zu verbessern. Es werden nur anonyme Daten erfasst; persönliche Informationen werden nicht nachverfolgt.",
+  "privacySectionFreeServiceTitle": "3. Kostenloser und werbefreier Service",
+  "privacySectionFreeServiceText": "Der Dienst ist vollständig kostenlos und enthält keine Werbung. Das ist keine Magie; wir haben den Dienst so gestaltet, dass kostenlose Hosting-Dienste genutzt werden können, da wir nicht glauben, dass alles ums Geldverdienen gehen sollte.",
+  "privacySectionOpenAIDataTitle": "4. Nutzung von Daten durch OpenAI",
+  "privacySectionOpenAIDataText": "Sofern nicht abbestellt, kann OpenAI Konversationsdaten zur Verbesserung seiner Modelle verwenden. Für detailliertere Informationen konsultieren Sie bitte die Datenschutzerklärung von OpenAI.",
+  "openaiLink": "die Datenschutzerklärung von OpenAI",
+  "privacySectionContactTitle": "5. Kontaktinformationen",
+  "privacySectionContactText": "Für datenschutzbezogene Anfragen senden Sie bitte eine E-Mail an ",
+  "privacyClosing": "Vielen Dank, dass Sie diesen Dienst ausprobiert haben 💛",
+
   "ancoats": {
     "introTextBeforeMap": "Gehen Sie zu",
     "cuttingRoomSquare": "Cutting Room Square",

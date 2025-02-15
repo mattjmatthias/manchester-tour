@@ -82,7 +82,7 @@ export default function BeforeYouStart() {
     localStorage.setItem("music", musicServer.toString());
     query.set("l", language);
     query.set("m", musicServer.toString());
-    
+
     i18n.changeLanguage(language).then(() => {
       window.location.href = `./?${query.toString()}`;
     });
@@ -92,13 +92,13 @@ export default function BeforeYouStart() {
     <div>
       <div className="flex flex-col md:p-16 p-8 h-full w-full">
         {/* Top buttons: Back and Save Changes */}
-        <div className="md:flex w-fit gap-x-2 items-center">
-          <div className="text-left">
-            <Button className="text-xl" href="/" label={t("back")} />
+        <div className="flex flex-row gap-x-2 items-center">
+          <div className="w-1/2 md:w-auto">
+            <Button className="w-full text-xl" href="/" label={t("back")} />
           </div>
-          <div>
+          <div className="w-1/2 md:w-auto">
             <Button
-              className="text-xl"
+              className="w-full text-xl"
               onClick={handleSaveChanges}
               label={t("saveChanges", "Save Changes")}
             />
@@ -148,21 +148,6 @@ export default function BeforeYouStart() {
             <p className="text-base">{t("openaiSupportText")}</p>
           </section>
 
-          {/* Music Setup Section */}
-          <section className="mb-8">
-            <h2 className="text-2xl mb-2">{t("musicSetupTitle")}</h2>
-            <p className="text-base">{t("musicSetupText")}</p>
-            <select
-              className="mt-2 p-2 border rounded"
-              value={musicServer.toString()}
-              onChange={handleMusicChange}
-            >
-              <option value="0">{t("musicOptionSpotify")}</option>
-              <option value="1">{t("musicOptionApple")}</option>
-              <option value="2">{t("musicOptionYouTube")}</option>
-            </select>
-          </section>
-
           {/* Language Setup Section */}
           <section className="mb-8">
             <h2 className="text-2xl mb-2">{t("languageSetupTitle")}</h2>
@@ -178,6 +163,21 @@ export default function BeforeYouStart() {
               <option value="es">{t("languageOptionSpanish")}</option>
               <option value="de">{t("languageOptionGerman")}</option>
               <option value="it">{t("languageOptionItalian")}</option>
+            </select>
+          </section>
+
+          {/* Music Setup Section */}
+          <section className="mb-8">
+            <h2 className="text-2xl mb-2">{t("musicSetupTitle")}</h2>
+            <p className="text-base">{t("musicSetupText")}</p>
+            <select
+              className="mt-2 p-2 border rounded"
+              value={musicServer.toString()}
+              onChange={handleMusicChange}
+            >
+              <option value="0">{t("musicOptionSpotify")}</option>
+              <option value="1">{t("musicOptionApple")}</option>
+              <option value="2">{t("musicOptionYouTube")}</option>
             </select>
           </section>
 

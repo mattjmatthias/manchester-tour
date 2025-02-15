@@ -60,6 +60,23 @@
   "by": "di",
   "attributionsHeader": "Crediti e attribuzioni",
   "saveChanges": "Salva modifiche",
+
+  "privacyPageTitle": "Informativa sulla privacy",
+  "privacyPageSubtitle": "La privacy è importante",
+  "privacyIntro": "Questa informativa spiega come vengono gestite e protette le informazioni.",
+  "privacySectionChatGPTTitle": "1. Conversazioni ChatGPT",
+  "privacySectionChatGPTText": "Le conversazioni con ChatGPT rimangono private tra te e OpenAI e non sono accessibili da questo sito.",
+  "privacySectionAnalyticsTitle": "2. Google Analytics",
+  "privacySectionAnalyticsText": "Google Analytics viene utilizzato per monitorare l'utilizzo e la popolarità del servizio. Questi dati aiutano a comprendere il coinvolgimento degli utenti e a migliorare il servizio. Vengono raccolti solo dati anonimi; le informazioni personali non vengono tracciate.",
+  "privacySectionFreeServiceTitle": "3. Servizio gratuito e senza pubblicità",
+  "privacySectionFreeServiceText": "Il servizio è completamente gratuito e non contiene pubblicità. Non è magia; abbiamo progettato il servizio per poter utilizzare hosting gratuiti, poiché non crediamo che tutto debba ruotare attorno al profitto.",
+  "privacySectionOpenAIDataTitle": "4. Utilizzo dei dati da parte di OpenAI",
+  "privacySectionOpenAIDataText": "Salvo esplicita disattivazione, OpenAI può utilizzare i dati delle conversazioni per migliorare i propri modelli. Per informazioni più dettagliate, consulta l'informativa sulla privacy di OpenAI.",
+  "openaiLink": "l'informativa sulla privacy di OpenAI",
+  "privacySectionContactTitle": "5. Informazioni di contatto",
+  "privacySectionContactText": "Per qualsiasi richiesta relativa alla privacy, invia un'e-mail a ",
+  "privacyClosing": "Grazie per aver provato questo servizio 💛",
+
   "ancoats": {
     "introTextBeforeMap": "Vai a",
     "cuttingRoomSquare": "Cutting Room Square",
