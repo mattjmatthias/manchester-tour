@@ -65,7 +65,8 @@ export default function PrivacyPolicy() {
                 rel="noopener noreferrer"
               >
                 {t("openaiLink")}
-              </a>.
+              </a>
+              {i18n.language === 'jp' && t("privacySectionOpenAIDataText2")}
             </p>
           </section>
 

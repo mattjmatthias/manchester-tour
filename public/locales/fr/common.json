@@ -63,20 +63,21 @@
 
 
   "privacyPageTitle": "Politique de confidentialité",
-  "privacyPageSubtitle": "La confidentialité compte",
+  "privacyPageSubtitle": "Questions de confidentialité",
   "privacyIntro": "Cette politique de confidentialité décrit comment les informations sont traitées et protégées.",
   "privacySectionChatGPTTitle": "1. Conversations ChatGPT",
   "privacySectionChatGPTText": "Les conversations avec ChatGPT restent privées entre vous et OpenAI et ne sont pas accessibles par ce site.",
   "privacySectionAnalyticsTitle": "2. Google Analytics",
-  "privacySectionAnalyticsText": "Google Analytics est utilisé pour surveiller l'utilisation et la popularité du service. Ces données aident à comprendre l'engagement des utilisateurs et à améliorer le service. Seules des données anonymes sont collectées; les informations personnelles ne sont pas suivies.",
+  "privacySectionAnalyticsText": "Google Analytics est utilisé pour surveiller l'utilisation et la popularité du service. Ces données permettent de comprendre l'engagement des utilisateurs et d'améliorer le service. Nous n'affichons pas de bannière de cookies car nous n'utilisons aucun cookie de marketing : seules des données anonymes sont collectées et aucune information personnelle n'est suivie. Nous avons réduit la collecte de données au strict minimum avec deux objectifs simples : Le premier est de nous assurer que le site fonctionne correctement. Le second est de savoir combien de personnes utilisent le site et de quel pays elles viennent, notamment pour voir combien d'utilisateurs viennent de Manchester (comme prévu) et combien de personnes curieuses le testent dans le monde entier. Pour ce faire, nous avons désactivé toutes les fonctionnalités marketing de Google Analytics.",
   "privacySectionFreeServiceTitle": "3. Service gratuit et sans publicité",
   "privacySectionFreeServiceText": "Le service est entièrement gratuit et ne contient aucune publicité. Ce n'est pas de la magie; nous avons conçu le service pour utiliser des hébergements gratuits, car nous ne croyons pas que tout doive tourner autour du profit.",
   "privacySectionOpenAIDataTitle": "4. Utilisation des données par OpenAI",
-  "privacySectionOpenAIDataText": "Sauf opposition, OpenAI peut utiliser les données de conversation pour améliorer ses modèles. Pour plus d'informations détaillées, consultez la Politique de confidentialité d'OpenAI.",
-  "openaiLink": "la Politique de confidentialité d'OpenAI",
+  "privacySectionOpenAIDataText": "Sauf opposition, OpenAI peut utiliser les données de conversation pour améliorer ses modèles. Pour plus d'informations détaillées, consultez",
+  "openaiLink": "la Politique de confidentialité d'OpenAI.",
   "privacySectionContactTitle": "5. Coordonnées",
   "privacySectionContactText": "Pour toute question relative à la confidentialité, veuillez envoyer un e-mail à ",
   "privacyClosing": "Merci d'avoir essayé ce service 💛",
+  "linkIconAlt": "Icône de lien",
 
   "ancoats": {
     "introTextBeforeMap": "Allez à",
