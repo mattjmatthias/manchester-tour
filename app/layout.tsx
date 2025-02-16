@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import localFont from "next/font/local";
 import ClientI18nProvider from "./ClientI18nProvider";
 import "../styles/globals.css";
@@ -33,6 +34,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-XJ7GBM97MH`}
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-XJ7GBM97MH');
+          `}
+        </Script>
+      </head>
       <body
         className={`${cardo.variable} ${cardoItalic.variable} ${cardoBold.variable} antialiased`}
       >
