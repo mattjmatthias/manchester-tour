@@ -45,7 +45,12 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-XJ7GBM97MH');
+            gtag('config', 'G-XJ7GBM97MH', {
+              anonymize_ip: true,
+              allow_google_signals: false,
+              allow_ad_personalization_signals: false,
+              cookie_flags: 'SameSite=None;Secure'
+            });
           `}
         </Script>
       </head>
